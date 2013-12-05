@@ -1,0 +1,318 @@
+@charset "utf-8";
+/* CSS Document */
+/* Einstellungen für den Html Body */
+body			{
+				padding-top:0px;
+				margin-top:0px;
+				background-image:url(../images/backgrounds/dark_wall.png);
+				background-repeat:repeat;
+				}
+/* Keine Textdecoration bei Links */				
+a         		{
+				margin-top:0px;
+  				outline: 0;
+				text-decoration:none;
+				color:#FFF;
+				}
+
+/* Div für den gesammten Bereich */			
+#all			{
+				height:1000px;
+				width:921px;
+				margin:0px auto;
+				text-align:left; 
+				}
+				
+/* Button div für die Headerbuttons */								
+#bannerBtn		{
+				height: 65px;
+				width: 249px;
+				position:absolute;
+				top: 27px;
+				margin-left:116px;
+				}
+/* Class für den Registerbutton, erweitert bannerBtn */				
+.registerBtn	{
+				background-image:url(../images/site/buttons/registerBtn.png);
+				}
+/* Buttontausch bei hovern über registerBtn */
+.registerBtn:hover{
+				background-image:url(../images/site/buttons/registerBtnHover.png);
+				}
+				
+/* SP-Logo auf dem Header */				
+#logo			{
+				height:70px;
+				width:70px;
+				background-image:url(../images/site/logos/logo.png);
+				position:absolute;
+				top:24px;
+				margin-left:10px;
+				}
+/* Headerbereich */				
+#header			{
+				height: 110px;
+				width: 900px;
+				margin-left: 10px;
+				background-image:url(../images/site/header.png);
+				}
+/*--------------------------------------------------------------*/	
+/* Login auf header */
+#loginH			{
+				height:30px;
+				width:400px;
+				margin-top:26px;
+				float:right;
+				}
+.formfield		{
+				width:100px;
+				color:#666;
+				font-family:Tahoma, Geneva, sans-serif;
+				font-size:10px;
+				font-weight:bold;
+				margin-right:5px;
+				}
+/*--------------------------------------------------------------*/	
+/* Bannerbereich */			
+#banner			{
+				height: 383px;
+				width: 921px;
+				background-image:url(../images/site/banner.png);
+				}
+/* Bild fürs Banner (mit dem Fußball)*/
+#bannerPICTURE  {
+				height: 253px;
+				width: 875px;
+				background-image:url(../images/site/bannerPicture.png);
+				background-repeat:no-repeat;
+				position:relative;
+				top:23px;
+				left:20px;
+				}
+/* Durchsichtige InfoBox auf dem Banner */
+#infoBox		{
+				height:206px;
+				width: 265px;
+				background-image:url(../images/site/infoBox.png);
+				position:absolute;
+				top: 10px;
+				right: 10px;
+				}
+/* Text Klasse für die InfoBox auf dem Banner */				
+.boxText		{
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:10px;
+				color:#FFF;
+				}
+/* Bereich unter dem Banner der den Inhalt fasst */
+#content		{
+				height:auto;
+				min-height: 800px;
+				width: 900px;
+				background-color:#2b2a2a;
+				margin: 0px auto;
+				}
+				
+		
+/* Alles was mit dem Wettfeld zu tun hat: */
+/*--------------------------------------------------------------*/	
+/* Schwarze Box die im Contentbereich die Wettfelder fasst: */				
+.competBox		{
+				height:auto;
+				min-height:400px;
+				width: 880px;
+				position:relative;
+				top: 10px;
+				margin: 0px auto;
+				padding-top:8px;
+				padding-bottom: 8px;
+				background-color:#000;
+				border-radius:8px;
+				}
+/*--------------------------------------------------------------*/	
+/* Linker Button fuer Flaggen icon (äußerer Rand grau) */
+.compFBLft		{
+				height: 42px;
+				width: 66px;
+				margin-left:3px;
+				border-top-left-radius: 8px;
+				-webkit-border-top-left-radius: 8px;
+				border-bottom-left-radius: 8px;
+				-webkit-border-bottom-left-radius: 8px;
+				background: -moz-linear-gradient(top, #4e4e4e 10%, #161616 120%);
+				float:left;
+				}
+/* Spacer fuer linkes Flaggen icon (innerer Bereich) */
+.compFlgLft		{
+				height: 34px;
+				width: 58px;
+				margin:4px;
+				margin-top:5px;
+				border-top-left-radius: 6px;
+				border-bottom-left-radius: 6px;
+				background-image:url(../images/site/flgSpacerLeft.png);
+				}
+/* Rechter Button fuer Flaggen icon (äußerer Rand grau) */
+.compFBRght		{
+				height: 42px;
+				width: 66px;
+				border-top-right-radius: 8px;
+				border-bottom-right-radius: 8px;
+				background: -moz-linear-gradient(top, #4e4e4e 10%, #161616 120%);
+				float:left;
+				}
+/* Spacer fuer rechtes Flaggen icon (innerer Bereich) */
+/* Logo soll aus Datenbank geladen werden, muss nachher wohl noch ne div dazwischen */
+.compFlgRght	{
+				height: 34px;
+				width: 58px;
+				margin:4px;
+				margin-top:5px;
+				border-top-right-radius: 6px;
+				border-bottom-right-radius: 6px;
+				background-image:url(../images/site/flgSpacerRight.png);
+				}
+/* Text auf match Button links */			
+.compTextL		{
+				font-family:Arial, Helvetica, sans-serif;
+				color:#FFF;
+				width:130px;
+				font-size:12px;
+				font-weight:bold;
+				margin-left:2px;
+				margin-top:2px;
+				float:left;
+				}
+/*--------------------------------------------------------------*/				
+/* Competition-Quotenfeld links */
+.compquote		{
+				width:56px;
+				margin-top:2px;
+				font-size:12px;
+				font-family:Arial, Helvetica, sans-serif;
+				font-weight:bold;
+				color:#000;
+				float:right;
+				}
+/* Competition-Quotenfeld mitte (class="compquote compquoteM) */
+.compquoteM		{
+				width:30px;
+				}
+/* Competition-Quotenfeld rechts (class="compquote compquoteR) */
+.compquoteR		{
+				float:left;
+				}
+/*--------------------------------------------------------------*/					
+/* Text auf unentschieden Button */
+.compTextL.compdrwText
+				{
+				width:100px;
+				text-align:center;
+				margin-left:0px;
+				}
+/* Text auf match Button rechts */
+.compTextR		{
+				text-align:right;
+				margin-left:0px;
+				margin-right:2px;
+				float:right;
+				}
+/* Button für Sieg auf Mannschaft*/
+.competitorSel	{
+				height:22px;
+				width:216px;/*216*/
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3B3B3B', endColorstr='#161616',GradientType=0 ); /* IE6-9 */
+				float:left;
+				}
+.bgGradient		{
+				background: -moz-linear-gradient(top, #3B3B3B 10%, #161616 120%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#3B3B3B), color-stop(120%,#161616)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top, #3B3B3B 10%,#161616 120%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top, #3B3B3B 10%,#161616 120%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top, #3B3B3B 10%,#161616 120%); /* IE10+ */
+				background: linear-gradient(to bottom, #3B3B3B 10%,#161616 120%); /* W3C */
+				}
+/* Button für unentschieden */
+.drwSel			{
+				height:22px;
+				width:150px;
+				float:left;
+				margin-left:9px;
+				margin-right:9px;
+				}
+/* Wrapper für gesammtes Matchkonstrukt	*/
+.match			{
+				height:39px;
+				width:738px;
+				padding:3px;
+				position:relative;
+				padding-bottom:8px;
+				}
+/* Wrapper für info sieg unentschieden-buttons */
+.matchoptions	{
+				height:42px;
+				width:600px;
+				float:left;
+				}
+/* Spacer für Heimspiel Datum und Gast */
+.matchinfo		{
+				margin-left:2px;
+				margin-bottom:4px;
+				margin-right:2px;
+				height:16px;
+				width:596px;
+				background-color:#717171;
+				}
+/* Spacer für Heimspiel */
+.matchmembl 	{
+				height:16px;
+				width:220px;
+				float:left;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:11px;
+				color:#000;
+				}
+/* Spacer für Gast */
+.matchmembl.matchmembr
+				{
+				text-align:right;
+				}
+/* Spacer für Datum + Uhrzeit */
+.matchtime		{
+				height:16px;
+				width:156px;
+				float:left;
+				text-align:center;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:11px;
+				color:#000;
+				}
+/*--------------------------------------------------------------*/					
+/* ENDE Wettfeld */
+/*--------------------------------------------------------------*/	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
