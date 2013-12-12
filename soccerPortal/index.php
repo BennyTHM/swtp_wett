@@ -72,6 +72,10 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link rel="SHORTCUT ICON" href="sp.ico" type="image/x-icon">
 
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="js/register.js"></script>
+
 <?php
 	if($verhalten==1){
 ?>
@@ -160,6 +164,27 @@
 			</div> <!-- close all -->
 			
 		</div> <!-- close grapper -->
+		<div id="registerPopup">
+			<form action="index.php" method="post">
+				<br />
+				Bitte geben Sie folgende Daten an:
+				<br /><br />
+				Username(*): <input class="formfield inset" type="text" name="username" value="Username">
+				<br />
+				E-Mail(*):<input class="formfield inset" type="text" name="e-mail" value="E-Mail">
+				<br />
+				Vorname: <input class="formfield inset" type="text" name="vorname" value="Vorname">
+				<br />
+				Name: <input class="formfield inset" type="text" name="name" value="Name">
+				<br />
+				Stadt: <input class="formfield inset" type="text" name="stadt" value="Stadt">
+				<br />
+				<input type="submit" value="Senden">
+				<br />
+				<br />
+				(*) Pflichtfelder
+			</form>
+		</div>
 	<?php
 		}
 	?>

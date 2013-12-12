@@ -7,15 +7,6 @@ $verhalten=0;
 
 include '../includes/connection.php';
 
-//$link = mysql_connect ('localhost','root','');
-					
-//Datenbank auswählen.
-//mysql_select_db("bet_system") or die ("Datenbank nicht gefunden");
-					
-//if ( !$link ){
-//	die('Momentan ist eine Verbindung zur Datenbank nicht möglich: ' . mysql_error());
-//}
-
 if(!isset($_GET["page"])){
 	$verhalten=0;
 }
@@ -74,6 +65,6 @@ if($verhalten==1){
 else{
 ?>
 	Bitte loggen Sie sich erneut ein. Einen Moment bitte Sie werden weitergeleitet...
-	<meta http-equiv="refresh" content="0; URL=http://localhost/swtp_w/soccerPortal/index.php" />
+	<meta http-equiv="refresh" content="0; URL=../index.php" />
 <?php
 }

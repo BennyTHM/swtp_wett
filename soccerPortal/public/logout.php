@@ -4,6 +4,6 @@ session_destroy();
 ?>
 <html>
 <head>
-	<meta http-equiv="refresh" content="1; URL=http://localhost/swtp_w/soccerPortal/index.php" />
+	<meta http-equiv="refresh" content="1; URL=../index.php" />
 <head>
 </html>

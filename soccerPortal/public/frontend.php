@@ -43,7 +43,7 @@ if(isset($_SESSION["username"])){
 	<!-- open shoutbox -->
 	<?php $bild="zuklappen.png" ?>
 		<div id="shoutboxbutton">
-			<img src="<?php echo "http://localhost/swtp_w/soccerPortal/images/site/shoutbox/" . $bild; ?>" id="shoutboxpicture" alt="shoutbox" onclick="changePic();"/>
+			<img src="<?php echo "../images/site/shoutbox/" . $bild; ?>" id="shoutboxpicture" alt="shoutbox" onclick="changePic();"/>
 		</div>
 		<div id="shoutbox" class="ui-widget-content">
 			<p>
@@ -59,6 +59,6 @@ if(isset($_SESSION["username"])){
 else{
 ?>
 	Bitte loggen Sie sich erneut ein. Einen Moment bitte Sie werden weitergeleitet...
-	<meta http-equiv="refresh" content="0; URL=http://localhost/swtp_w/soccerPortal/index.php" />
+	<meta http-equiv="refresh" content="0; URL=:../index.php" />
 <?php
 }

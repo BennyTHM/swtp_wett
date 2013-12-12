@@ -25,6 +25,6 @@ while ($zeile = mysql_fetch_array( $result, MYSQL_ASSOC))
 else{
 ?>
 Bitte loggen Sie sich erneut ein. Einen Moment bitte Sie werden weitergeleitet...
-<meta http-equiv="refresh" content="0; URL=http://localhost/swtp_w/soccerPortal/index.php" />
+<meta http-equiv="refresh" content="0; URL=../index.php" />
 <?php
 }
