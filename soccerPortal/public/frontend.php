@@ -35,9 +35,9 @@ if(isset($_SESSION["username"])){
 			</div>
 			<div id="navgreen"></div>
 		</div>
-		<div id="score"><div id="coin"></div><div id="money"><?php echo $_SESSION["kontostand"]; ?></div></div>
+		<div id="score"><div id="coin"></div><div id="money"><?php echo $_SESSION["kontostand"]; ?></div><div id="toplist" class="utext">Toplist</div><div id="arrows"></div></div>
 		<div id="profilspacer"><a href="http://en.wikipedia.org/wiki/Gandalf"><div id="profilPic"></div></a></div>
-		<div id="username"><?php echo $_SESSION["username"]; ?></div>
+		<div id="username" class="utext"><?php echo $_SESSION["username"]; ?></div>
 		<a href="logout.php"><div id="logoutBtn"></div></a>
 	</div>
 	<!-- open shoutbox -->
