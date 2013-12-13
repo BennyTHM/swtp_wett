@@ -97,8 +97,13 @@
 			<div id="sidebar">
 				<div id="sidenavi">
 					<div class="sideBtn first"><div id="start" class="sideBtnTxt">Startseite</div></div>
-					<div class="sideBtn"><div id="about" class="sideBtnTxt">About</div></div>
+					<a href="https://www.google.de/webhp?tab=ww&ei=xsGpUu6xFcvxhQfgtoFA&ved=0CBEQ1S4"><div class="sideBtn"><div id="about" class="sideBtnTxt">About</div></div></a>
 					<div class="sideBtn"><div id="agb" class="sideBtnTxt">AGB's</div></div>
+					<div class="sideBtn"><div id="agb" class="sideBtnTxt">AGB's</div></div>
+					<div class="sideBtn"><div id="agb" class="sideBtnTxt">AGB's</div></div>
+					<div class="sideBtn"><div id="agb" class="sideBtnTxt">AGB's</div></div>
+					<div class="sideBtn"><div id="agb" class="sideBtnTxt">AGB's</div></div>
+<div class="sideBtn"><div id="about" class="sideBtnTxt"><a href="https://www.google.de/webhp?tab=ww&ei=xsGpUu6xFcvxhQfgtoFA&ved=0CBEQ1S4">About</a></div></div>
 					<div class="sideBtn last"><div id="impressum" class="sideBtnTxt">Impressum</div></div>
 				</div>
 			</div> <!-- close sidebar-->
