@@ -22,7 +22,10 @@ if(isset($_SESSION["username"])){
 <body>
 	<div id="frontendHead">
 		<div id="frontendNavi">
-		<div id="logoSpacer"><div id="frontlogo"></div></div>
+			<div id="logoSpacer">
+				<div id="frontlogo"></div>
+			</div> <!-- close logoSpacer -->
+		
 		<div id="navspace">
 			<div id="navBtns">
 				<a href="https://www.google.de/?gws_rd=cr&ei=qGanUpXAMcf2ygOzwYCQDA"><div id="button1" class="leftBtn"><div class="frontbtnsTxt">Nachrichten</div></div></a>
@@ -32,16 +35,49 @@ if(isset($_SESSION["username"])){
 				<div id="button5" class="rightBtn"><div class="frontbtnsTxt">Profil</div></div>
 				<div id="button6" class="rightBtn"><div class="frontbtnsTxt">Ligen</div></div>
 				<div id="button7" class="rightBtn last"><div class="frontbtnsTxt">WM</div></div>
-			</div>
+			</div> <!-- close navBtns -->
 			<div id="navgreen"></div>
-		</div>
-		<div id="score"><div id="coin"></div><div id="money"><?php echo $_SESSION["kontostand"]; ?></div><div id="toplist" class="utext">Toplist</div><div id="arrows"></div></div>
-		<div id="profilspacer"><a href="http://en.wikipedia.org/wiki/Gandalf"><div id="profilPic"></div></a></div>
-		<div id="username" class="utext"><?php echo $_SESSION["username"]; ?></div>
-		<a href="logout.php"><div id="logoutBtn"></div></a>
-	</div>
+		</div> <!-- close navspace -->
+		
+		<div id="score">
+			<div id="coin"></div>
+			<div id="money"><?php echo $_SESSION["kontostand"]; ?></div>
+			<div id="toplist" class="utext">Toplist</div>
+			<div id="arrows"></div>
+		</div> <!-- close score -->
+		
+		<div id="profilspacer">
+			<a href="http://en.wikipedia.org/wiki/Gandalf">
+				<div id="profilPic"></div>
+			</a>
+		</div> <!-- close profilspacer -->
+		
+		<div id="username" class="utext">
+			<?php echo $_SESSION["username"]; ?>
+		</div> <!-- close profilspacer -->
+		
+		<a href="logout.php">
+			<div id="logoutBtn"></div>
+		</a>
+		
+	</div> <!-- close frontendHead -->
+	
+	<div id="frontcontent">
+		<div id="news">
+			<div id="newsBtnSpacer">
+			werwrwr
+			</div>
+			<div id="newsSpacer">
+				<div id="newsContent" class="frontendGradient">
+				</div> <!-- close newsContent -->
+			</div> <!-- close newsSpacer -->
+		</div> <!-- close news -->
+	</div> <!-- close frontcontent -->
+	
+	
+	<!------------------------------------------->
 	<!-- open shoutbox -->
-	<?php $bild="zuklappen.png" ?>
+	<!--<?php $bild="zuklappen.png" ?>
 		<div id="shoutboxbutton">
 			<img src="<?php echo "../images/site/shoutbox/" . $bild; ?>" id="shoutboxpicture" alt="shoutbox" onclick="changePic();"/>
 		</div>
@@ -49,8 +85,8 @@ if(isset($_SESSION["username"])){
 			<p>
 				Hier steht dann später die shoutbox drinnen. Dort kann man chatten und so ein Mist...
 			</p>
-		</div>
-		<!-- close shoutbox -->
+		</div> -->
+		<!-- close shoutbox --> 
 </body>
 </html>
 
