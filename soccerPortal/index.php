@@ -98,7 +98,8 @@
 				<div id="sidenavi">
 					<div class="sideBtn first"><div id="start" class="sideBtnTxt">Startseite</div></div>
 					<div class="sideBtn"><div id="about" class="sideBtnTxt">About</div></div>
-					<div class="sideBtn"><div id="agb" class="sideBtnTxt">AGB's</div></div>
+					<div class="sideBtn"><div id="agbs" class="sideBtnTxt">AGB's</div></div>
+					<div class="sideBtn"><div id="faq" class="sideBtnTxt">FAQ's</div></div>
 					<div class="sideBtn last"><div id="impressum" class="sideBtnTxt">Impressum</div></div>
 				</div>
 			</div> <!-- close sidebar-->
@@ -128,38 +129,13 @@
 						</div> <!-- close bannerNavi -->
 						
 					</div> <!-- close bannerPICTURE -->
-					<div class="topic">Aktuelle Top-Wetten:</div>
+					<div id="topic" class="topic">Aktuelle Top-Wetten:</div>
 				</div> <!-- close banner -->
 				
 				<div id="content">
-					<div id="text">
-						<div class="competBox">
-							 <div class="match">
-									 <div class="compFBLft">
-										<div class="compFlgLft" style="background-image:url(images/site/matchlogos/bayernM.png)
-										;">
-										</div> <!-- close compFlgLft -->
-									 </div> <!-- close compFBLft -->
-										 <div class="matchoptions">
-												 <div class="matchinfo">
-													<div class="matchmembl">Heimspiel</div>
-													<div class="matchtime">02.12.2013 14:00</div>
-													<div class="matchmembl matchmembr">Gast</div>
-												 </div>
-												 <div class="competitorSel bgGradient"><div class="compTextL">1FC Bayern München</div><div class="compquote">Sieg 3.20</div></div>
-												 <div class="drwSel bgGradient"><div class="compTextL compdrwText">unentschieden</div><div class="compquote compquoteM">1.0</div></div>
-												 <div class="competitorSel bgGradient"><div class="compTextL compTextR">BVB</div><div class="compquote compquoteR">Sieg 3.20</div></div>
-										 </div> <!-- close matchoptions -->
-									 <div class="compFBRght">
-										<div class="compFlgRght" style="background-image:url(images/site/matchlogos/bvb.png)
-										;">
-										</div>
-									 </div>
-							 </div> <!-- close match -->
-							
-						</div> <!-- close competBox -->
-					
-					</div> <!-- close text -->
+					<div id="inhalt" class="competBox">
+						<?php include "public/startseite.php" ?>
+					</div> <!-- close competBox -->
 					
 				</div> <!-- close content -->
 				
