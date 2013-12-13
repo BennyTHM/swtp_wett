@@ -65,10 +65,18 @@ if(isset($_SESSION["username"])){
 	<div id="frontcontent">
 		<div id="news">
 			<div id="newsBtnSpacer">
-			werwrwr
-			</div>
+				<div id="news1" class="newsBtn"><div class="newsPic"></div><div class="newsBtnTxt boxText">text</div></div>
+				<div id="news2" class="newsBtn"><div class="newsPic"></div><div class="newsBtnTxt boxText">text</div></div>
+				<div id="news3" class="newsBtn"><div class="newsPic"></div><div class="newsBtnTxt boxText">text</div></div>
+				<div id="news4" class="newsBtn"><div class="newsPic"></div><div class="newsBtnTxt boxText">text</div></div>
+			</div> <!-- close newsBtnSpacer -->
 			<div id="newsSpacer">
 				<div id="newsContent" class="frontendGradient">
+					<div id="newsContPic">
+						<div id="newsContTxtbx">
+							<div class="newsContTxt">sfsfdsfjhgjhfgjhgjhgjghjhgjhgjhgjhg</div>
+						</div>
+					</div>
 				</div> <!-- close newsContent -->
 			</div> <!-- close newsSpacer -->
 		</div> <!-- close news -->

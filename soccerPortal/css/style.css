@@ -125,7 +125,6 @@ a         		{
 				font-size:12px;
 				font-weight:bold;
 				color:#FFF;
-				cursor:pointer;
 				}
 /*--------------------------------------------------------------*/					
 /* Class für Text -> Aktuelle Top-Wetten */
@@ -271,10 +270,6 @@ a         		{
 				padding-bottom: 8px;
 				background-color:#000;
 				border-radius:8px;
-				font-family:Arial, Helvetica, sans-serif;
-				font-size:12px;
-				font-weight:bold;
-				color:#FFF;
 				}
 /*--------------------------------------------------------------*/	
 /* Linker Button fuer Flaggen icon (äußerer Rand grau) */
@@ -464,7 +459,7 @@ a         		{
 				width:1300px;
 				margin:0px auto;
 				text-align:left;
-				background-color:#093;
+				/*background-color:#093;*/
 				}
 /*--------------------------------------------------------------*/
 #frontendHead	{
@@ -624,38 +619,83 @@ a         		{
 #logoutBtn:hover{
 				background-image:url(../images/site/buttons/logoutHover.png);
 				}
-/*--------------------------------------------------------------*/					
-#newsSpacer		{
-				height:340px;
-				width:500px;
-				background-color:#0C9;
-				float:left;
-				}
-#newsBtnSpacer	{
-				height:340px;
-				width:160px;
-				background-color:#F00;
-				float:left;
-				}
+/*--------------------------------------------------------------*/	
+/* Fasst die gesammten News mit Buttons: */
 #news			{
 				position:relative;
 				top:10px;
 				left:10px;
+				}				
+#newsSpacer		{
+				height:240px;
+				width:160px;
+				float:left;
 				}
+#newsBtnSpacer	{
+				padding-top:6px;
+				height:234px;
+				width:160px;
+				float:left;
+				}
+
 #newsContent	{
 				height:240px;
 				width:390px;
 				border-radius: 12px;
+				box-shadow: 0px 5px 6px #000;
 				}
+#newsContPic	{
+				position:relative;
+				top:10px;
+				left:10px;
+				height:220px;
+				width:370px;
+				background-image:url(../images/site/frontend/news/test2.jpg);
+				border-radius:10px;
+				}
+#newsContTxtbx	{
+				position:relative;
+				top:120px;
+				height:100px;
+				width:370px;
+				border-bottom-left-radius:10px;
+				border-bottom-right-radius:10px;
+				background-color:#000;
+				opacity:0.7;
+				}
+.newsContTxt	{
+				padding:5px;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:12px;
+				font-weight:bold;
+				color:#FFF;
+				}
+				
 .newsBtn		{
-				height:80px;
-				width:150px;
+				margin-top:6px;
+				height:50px;
+				width:160px;
+				background-color:#0c0c0c;
+				border-top-left-radius:10px;
+				border-bottom-left-radius:10px;
+				box-shadow: 2px 2px 2px #000;
 				}
 .newsPic		{
-				
+				height:40px;
+				width:40px;
+				border-top-left-radius:4px;
+				border-bottom-left-radius:4px;
+				background-image:url(../images/site/frontend/news/test.png);
+				float:left;
+				margin-top:5px;
+				margin-left:10px;
 				}
 .newsBtnTxt		{
-				
+				height:40px;
+				width:95px;
+				padding-left:5px;
+				float:left;
+				margin-top:5px;
 				}
 /*--------------------------------------------------------------*/
 /*--------------------------------------------------------------*/		

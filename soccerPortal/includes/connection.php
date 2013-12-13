@@ -1,6 +1,6 @@
 <?php
 
-$link = mysql_connect ('localhost','root','');
+$link = mysql_connect ('localhost','root','zerberus');
 					
 //Datenbank auswählen.
 mysql_select_db("bet_system") or die ("Datenbank nicht gefunden");
