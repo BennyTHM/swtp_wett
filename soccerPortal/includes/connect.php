@@ -22,6 +22,7 @@ class Mysql {
 		}
 	}
 	
+	//TODO: Betreff angeben, TEXT SELBST angeben können, diese funktion muss viel flexibler werden, wenn wir die von überall benutzen können sollen.
 	function sendEmail($name, $mail, $password){
 		$nachricht = "Ihr Passwort ist: " . $password . 
 		". Nach der Änderung Ihres aktuellen Passworts, wird Ihr Benutzerkonto aktiviert.";
