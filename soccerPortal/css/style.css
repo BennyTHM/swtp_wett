@@ -71,6 +71,12 @@ a         		{
 				margin-left: 10px;
 				background-image:url(../images/site/header.png);
 				}
+.defaultTxt		{
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:11px;
+				color:#FFF;
+				font-weight:bold;
+				}
 /*--------------------------------------------------------------*/	
 /* Navileiste links */
 #sidebar		{
@@ -461,6 +467,17 @@ a         		{
 				text-align:left;
 				/*background-color:#093;*/
 				}
+#frontendhead	{
+				height:290px;
+				width:1300px;
+				/*background-color:#CF0;*/
+				}
+#frontendmain	{
+				min-height:800px;
+				width:1300px;
+				/*background-color:#F00;*/
+				margin:0px auto;
+				}
 /*--------------------------------------------------------------*/
 #frontendHead	{
 				height:77px;
@@ -698,7 +715,278 @@ a         		{
 				margin-top:5px;
 				}
 /*--------------------------------------------------------------*/
-/*--------------------------------------------------------------*/		
+/* "Last matches" -Fenster: */
+#lastMouter		{
+				position:relative;
+				top:10px;
+				float:right;
+				height:260px;
+				width:680px;
+				background-color:#0C6;
+				border-radius:12px;
+				box-shadow: 0px 5px 6px #000;
+				}
+#lastMoutertxt	{
+				margin-top:3px;
+				height:12px;
+				width:100px;
+				text-align:center;
+				color:#FFF;
+				}
+#lastMinner		{
+				height:225px;
+				width:660px;
+				margin-top:5px;
+				margin-left:10px;
+				background-color:#000;
+				border-radius:12px;
+				}
+/*--------------------------------------------------------------*/
+/* START "last match" -Gegenüberstellung: */
+/*--------------------------------------------------------------*/
+.lastMatchbox	{
+				position:relative;
+				top:5px;
+				left:5px;
+				height:41px;
+				width:608px;
+				}
+.lastMatchinner	{
+				position:absolute;
+				height:30px;
+				width:590px;
+				bottom:0px;
+				}
+/*--------------------------------------------------------------*/				
+.lastMatchLft	{
+				height:30px;
+				width:50px;
+				background-color:#999;
+				border-top-left-radius:8px;
+				border-bottom-left-radius:8px;
+				float:left;
+				}
+.LMLinner		{
+				height:24px;
+				width:44px;
+				margin-top:3px;
+				margin-left:3px;
+				background-color:#FFF;
+				border-top-left-radius:6px;
+				border-bottom-left-radius:6px;
+				}
+.lastMatchLft.Rght	{
+				float:left;
+				border-top-left-radius:0px;
+				border-bottom-left-radius:0px;
+				border-top-right-radius:8px;
+				border-bottom-right-radius:8px;
+				}
+.LMLinner.LMR	{
+				border-top-left-radius:0px;
+				border-bottom-left-radius:0px;
+				border-top-right-radius:6px;
+				border-bottom-right-radius:6px;
+				}
+/*--------------------------------------------------------------*/				
+.lastMatchMid	{
+				position:relative;
+				top:5px;
+				float:left;
+				height:25px;
+				width:490px;
+				}
+.lastMatchMlft	{
+				float:left;
+				height:25px;
+				width:207px;
+				}
+.lMMltxtL		{
+				height:20px;
+				margin-top:2px;
+				margin-left:4px;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:12px;
+				font-weight:bold;
+				color:#FFF;
+				}
+.lMMltxtL.lMMltxtR{
+				text-align:right;
+				margin-left:0px;
+				margin-right:4px;
+				}
+.lastMatchMmid	{
+				float:left;
+				height:25px;
+				width:76px;
+				}
+.lMMltxtL.lMMMtxt{
+				height:22px;
+				width:76px;
+				background:url(../images/site/frontend/matches/mresult.png) no-repeat;
+				color:#000;
+				text-align:center;
+				margin-left:0px;
+				padding-top:2px;
+				}
+.lastMatchMrght {
+				float:left;
+				height:25px;
+				width:207px;
+				}
+/*--------------------------------------------------------------*/				
+.matchWon		{
+				position:absolute;
+				left:5px;
+				height:11px;
+				width:60px;
+				background:url(../images/site/frontend/matches/mWon.png) no-repeat;
+				}
+.matchScore		{
+				position:absolute;
+				right:0px;
+				height:16px;
+				width:118px;
+				background:url(../images/site/frontend/matches/mScore.png) no-repeat;
+				}
+.lastMatchWidTxtL{
+				position:absolute;
+				left:14px;
+				font-family:Arial, Helvetica, sans-serif;
+				font-weight:bold;
+				font-size:9px;
+				height:9px;
+				}
+.lastMatchWidTxtL.lastMatchWidTxtR{
+				left:43px;
+				}
+/*--------------------------------------------------------------*/	
+/* ENDE "last match" -Gegenüberstellung							*/
+/*--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------*/	
+/* START "Online-Liste"											*/
+/*--------------------------------------------------------------*/
+#onlineListOuter{
+	position:relative;
+	left:10px;
+	float:left;
+	width:200px;
+	min-height:600px;
+	background-color:#000;
+	border-radius:4px;
+	box-shadow: 0px -4px 6px #000;
+}
+#onlineListInner{
+	margin:0px auto;
+	margin-top:5px;
+	padding-top:5px;
+	min-height:585px;
+	width:190px;
+	background-color:#333;
+	border-radius:4px;
+}
+.onlineListEntry{
+	height:25px;
+	width:190px;
+}
+.onlineListUsrIcon{
+	float:left;
+	height:20px;
+	width:20px;
+	margin-top:2px;
+	margin-left:4px;
+	background-color:#FFF;
+	border-radius:2px;
+}
+.onlineListUsrName{
+	float:left;
+	margin-left:5px;
+	height:20px;
+	padding-top:5px;
+	width:142px;
+	color:#FFF;
+}
+.onlineIcon{
+	float:left;
+	height:14px;
+	width:15px;
+	margin-top:5px;
+	margin-left:2px;
+	background:url(../images/site/frontend/online/online.png) no-repeat;
+	
+}
+.onlineLineGlow{
+	height:9px;
+	width:190px;
+	background-image:url(../images/site/frontend/online/onlineGlow.png);
+}
+
+/*--------------------------------------------------------------*/	
+/* ENDE "Online-Liste"											*/
+/*--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------*/	
+/* START "Frontend Wettbereich"									*/
+/*--------------------------------------------------------------*/
+#betOuter		{
+	min-height:800px;
+	width:1050px;
+	float:right;
+	background-color:#063;
+}
+#betHeader		{
+	height:40px;
+	background-color:#000;
+	width:1050px;
+}
+.betHeadertxt	{
+				color:#FF0;
+				font-family:Arial, Helvetica, sans-serif;
+				font-size:14px;
+				font-weight:bold;
+				width:200px;
+				float:left;
+				margin-top:5px;
+				margin-left:5px;
+}
+.betNavBtn		{
+  position:relative;
+	height:30px;
+	width:230px;
+	background-color:#F00;
+	float:right;
+	text-align:center;
+}
+#betContent		{
+	min-height:760px;
+	width:1050px;
+	background-color:#666;
+}
+.betCompetitions{
+				height:auto;
+				min-height:400px;
+				width: 1000px;
+				position:relative;
+				top: 10px;
+				margin-left:5px;
+				padding-top:8px;
+				padding-bottom: 8px;
+				background-color:#000;
+				border-radius:8px;
+}
+.betStats		{
+}
+
+
+/*--------------------------------------------------------------*/	
+/*  ENDE "Frontend Wettbereich"									*/
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+/* Verlauf der möglichst wiederbenutzt werden soll:	*/		
 .frontendGradient{
 			 	background: -moz-linear-gradient(top, #535353 10%, #101010 120%);
 				background: -webkit-gradient(linear, left top, left bottom, color-stop(10%,#535353), color-stop(120%,#101010)); /* Chrome,Safari4+ */
