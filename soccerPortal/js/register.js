@@ -24,4 +24,25 @@ $(document).ready(function(){
 			open=false;
 		}
 	});
+	
+	$("#start").click(function(){
+		$( "#inhalt" ).load( "public/startseite.php");
+		document.getElementById('top').innerHTML='Aktuelle Top-Wetten:';
+	});
+	$("#about").click(function(){
+		$( "#inhalt" ).load( "public/about.php");
+		document.getElementById('top').innerHTML='About:';
+	});
+	$("#agbs").click(function(){
+		$( "#inhalt" ).load( "public/agbs.php");
+		document.getElementById('top').innerHTML='AGB´s:';
+	});
+	$("#faq").click(function(){
+		$( "#inhalt" ).load( "public/faq.php");
+		document.getElementById('top').innerHTML='FAQ´s:';
+	});
+	$("#impressum").click(function(){
+		$( "#inhalt" ).load( "public/impressum.php");
+		document.getElementById('top').innerHTML='Impressum:';
+	});
 });

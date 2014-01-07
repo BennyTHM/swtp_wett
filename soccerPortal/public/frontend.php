@@ -17,6 +17,7 @@ if(isset($_SESSION["username"])){
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="../js/shoutbox.js"></script>
+<script src="../js/frontend.js"></script>
 
 </head>
 <body>

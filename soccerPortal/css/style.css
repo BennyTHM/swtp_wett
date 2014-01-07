@@ -131,6 +131,7 @@ a         		{
 				font-size:12px;
 				font-weight:bold;
 				color:#FFF;
+				cursor:pointer;
 				}
 /*--------------------------------------------------------------*/					
 /* Class für Text -> Aktuelle Top-Wetten */
@@ -276,6 +277,7 @@ a         		{
 				padding-bottom: 8px;
 				background-color:#000;
 				border-radius:8px;
+				color:white;
 				}
 /*--------------------------------------------------------------*/	
 /* Linker Button fuer Flaggen icon (äußerer Rand grau) */
