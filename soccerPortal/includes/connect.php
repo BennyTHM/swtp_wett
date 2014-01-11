@@ -1,6 +1,6 @@
 <?php
 
-require_once 'swift/lib/swift_required.php';
+require_once 'email.php';
 
 class Mysql {
 

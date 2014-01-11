@@ -1,6 +1,6 @@
 <?php
 
-require_once 'swift/lib/swift_required.php';
+require_once 'email.php';
 
 $link = mysql_connect ('localhost','root','');
 					
