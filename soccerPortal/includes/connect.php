@@ -1,5 +1,7 @@
 <?php
 
+require_once 'swift/lib/swift_required.php';
+
 class Mysql {
 
         public $link;
