@@ -143,14 +143,6 @@ class Mysql {
                 }
         }
         
-        //TODO: Betreff angeben, TEXT SELBST angeben kÃ¶nnen, diese funktion muss viel flexibler werden, wenn wir die von Ã¼berall benutzen kÃ¶nnen sollen.
-        function sendEmail($name, $mail, $password){
-                $nachricht = "Ihr Passwort ist: " . $password .
-                ". Nach der Ã„nderung Ihres aktuellen Passworts, wird Ihr Benutzerkonto aktiviert.";
-                // $nachricht = wordwrap($nachricht, 70);
-                mail($mail, 'Mein Betreff', $nachricht);
-        }
-        
         function random_pwd($length){
                 // Festlegung der verfÃƒÂ¼gbaren Buchstaben, Zahlen und Sonderzeichen
                 //$specialChars = array('!','@','#','$','%','&','*','(',')','_','-','+','=','[',']','<','>','?','/');
