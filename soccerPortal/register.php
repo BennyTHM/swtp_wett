@@ -27,6 +27,7 @@ if (!$mysql->exist($email, $username)){
 	$result = $mysql->mysqli->query($query);
 	if ($result){
 		echo "OK!";	
+		//TODO: hier anpassung nötig für die neue email funktion!
  		$mysql->sendEmail($name, $email, $password);
 	} else {
 		echo "Registrierung fehlgeschlagen: ". mysql_error();
