@@ -50,6 +50,7 @@
 					else{
 						$_SESSION["userid"]=$row["userID"];
 						$_SESSION["username"]=$row["username"];
+						$_SESSION["email"]=$row["email"];
 						$_SESSION["kontostand"]=$row["balance"];
 						$verhalten=1;
 					}
