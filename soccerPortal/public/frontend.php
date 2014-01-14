@@ -22,6 +22,7 @@ if(isset($_SESSION["username"])){
 
 </head>
 <body>
+<<<<<<< HEAD
   <div id="frontendHead">
     <div id="frontendNavi">
       <div id="logoSpacer">
@@ -304,6 +305,7 @@ if(isset($_SESSION["username"])){
       </p>
     </div> -->
     <!-- close shoutbox -->
+
 </body>
 </html>
 
