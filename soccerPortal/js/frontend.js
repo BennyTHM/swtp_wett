@@ -7,35 +7,60 @@ $(document).ready(function() {
 	});
 	
 	//Dynamisch nachladen
+	//Nachrichten
 	$("#posteingang").click(function(){
-		$( "#frontendmain" ).load( "posteingang.php");
+		$( "#inhalt" ).load( "posteingang.php");
+		document.getElementById('top').innerHTML='Posteingang:';
 	});
 	$("#postausgang").click(function(){
-		$( "#frontendmain" ).load( "postausgang.php");
+		$( "#inhalt" ).load( "postausgang.php");
+		document.getElementById('top').innerHTML='Postausgang:';
 	});
 	$("#verfassen").click(function(){
-		$( "#frontendmain" ).load( "pm.php");
+		$( "#inhalt" ).load( "pm.php");
+		document.getElementById('top').innerHTML='Mitteilung verfassen:';
 	});
 	$("#button1").click(function(){
-		$( "#frontendmain" ).load( "posteingang.php");
+		$( "#inhalt" ).load( "posteingang.php");
+		document.getElementById('top').innerHTML='Posteingang:';
 	});
+	//Wetten
 	$("#button2").click(function(){
-		$( "#frontendmain" ).load( ".php");
+		$( "#inhalt" ).load( ".php");
+		document.getElementById('top').innerHTML='Wette:';
 	});
+	//Home
 	$("#button3").click(function(){
-		$( "#frontendmain" ).load( ".php");
+		$( "#inhalt" ).load( "aktuelleSpiele.php");
+		document.getElementById('top').innerHTML='Aktuelle Top-Wetten:';
 	});
+	//Bestenliste
 	$("#button4").click(function(){
-		$( "#frontendmain" ).load( ".php");
+		$( "#inhalt" ).load( ".php");
+		document.getElementById('top').innerHTML='Bestenliste:';
 	});
+	//Profil
 	$("#button5").click(function(){
-		$( "#frontendmain" ).load( ".php");
+		$( "#inhalt" ).load( "profil.php");
+		document.getElementById('top').innerHTML='Profil:';
 	});
+	$("#profilAnsicht").click(function(){
+		$( "#inhalt" ).load( "profil.php");
+		document.getElementById('top').innerHTML='Profil:';
+	});
+	$("#profilBear").click(function(){
+		$( "#inhalt" ).load( "profilBear.php");
+		document.getElementById('top').innerHTML='Profil bearbeiten:';
+	});
+	//tabellen der Ligen
 	$("#button6").click(function(){
-		$( "#frontendmain" ).load( ".php");
+		$( "#inhalt" ).load( ".php");
+		document.getElementById('top').innerHTML='Ligen:';
 	});
+	//WM
 	$("#button7").click(function(){
-		$( "#frontendmain" ).load( ".php");
+		$( "#inhalt" ).load( ".php");
+		document.getElementById('top').innerHTML='WM:';
 	});
 	
 });

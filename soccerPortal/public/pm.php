@@ -52,10 +52,6 @@ if($verhalten==0){
 	<p>Nachricht: <textarea name="nachricht" cols="50" rows="10"></textarea></p>
 	<p><input type="submit" value="senden" /></p>
 </form>
-<br />
-<a href="posteingang.php">Posteingang</a>
-<br />
-<a href="postausgang.php">Postausgang</a>
 
 <?php
 }

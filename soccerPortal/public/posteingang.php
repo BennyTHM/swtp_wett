@@ -11,7 +11,6 @@ $mysql->connect();
 $sql = "SELECT * FROM privatemessage WHERE User_reseiver = '".$_SESSION["userid"]."'";
 
 $result=$mysql->mysqli->query($sql) or die ("Auslesen gescheitert.");
-echo "Feuer Frei";
 while ($zeile = $result->fetch_array(MYSQL_ASSOC))
 {
   echo "<br>";

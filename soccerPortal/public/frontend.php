@@ -86,8 +86,8 @@ if(isset($_SESSION["username"])){
               </div> <!-- close button2 -->
                 <div class ="dropspace">
                   <ul>
-                    <li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco">&nbsp Eigenes Profil</div></li>
-                    <li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco">&nbsp Profil bearbeiten</div></li>
+                    <li class="navitem"><div id="profilAnsicht" class="innerdrp"><div id="mInIco">&nbsp Eigenes Profil</div></li>
+                    <li class="navitem"><div id="profilBear" class="innerdrp"><div id="mOutIco">&nbsp Profil bearbeiten</div></li>
                   </ul>
                 </div> <!-- close dropspace -->
             </li>
@@ -230,14 +230,14 @@ if(isset($_SESSION["username"])){
       </div> <!-- close onlineListOuter -->
 
       <div id="betOuter">
-        <div id="betHeader"><div class="betHeadertxt">Aktuelle Top-Wetten:</div>
+        <div id="betHeader"><div id="top" class="betHeadertxt">Aktuelle Top-Wetten:</div>
           <div class="betNavBtn">Bundesliga</div>
           <div class="betNavBtn">Weltmeisterschaft 2014</div>
         </div> <!-- close betHeader -->
         <div id="betContent">
 
           <div id="text">
-            <div class="betCompetitions">
+            <div id="inhalt" class="betCompetitions">
                <div class="match">
                    <div class="compFBLft">
                     <div class="compFlgLft" style="background-image:url(images/site/matchlogos/bayernM.png)
@@ -273,7 +273,7 @@ if(isset($_SESSION["username"])){
 
   <!------------------------------------------->
   <!-- open shoutbox -->
-  <!--<?php $bild="zuklappen.png" ?>
+  <?php $bild="zuklappen.png" ?>
     <div id="shoutboxbutton">
       <img src="<?php echo "../images/site/shoutbox/" . $bild; ?>" id="shoutboxpicture" alt="shoutbox" onclick="changePic();"/>
     </div>
@@ -281,7 +281,7 @@ if(isset($_SESSION["username"])){
       <p>
         Hier steht dann sp�ter die shoutbox drinnen. Dort kann man chatten und so ein Mist...
       </p>
-    </div> -->
+    </div>
     <!-- close shoutbox -->
 
 </body>

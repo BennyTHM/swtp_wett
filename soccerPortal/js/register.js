@@ -25,6 +25,7 @@ $(document).ready(function(){
 		}
 	});
 	
+	//Inhalt dynamisch nachladen
 	$("#start").click(function(){
 		$( "#inhalt" ).load( "public/startseite.php");
 		document.getElementById('top').innerHTML='Aktuelle Top-Wetten:';
