@@ -10,7 +10,7 @@ class Mysql {
         public $userID;
         
         function connect(){
-                $this->mysqli = new mysqli("localhost","root","","bet_system");
+                $this->mysqli = new mysqli("localhost","root","zerberus","bet_system");
                 return $this->link;
         }
         

@@ -18,7 +18,6 @@ CREATE  TABLE IF NOT EXISTS `bet_system`.`User` (
   `username` VARCHAR(45) NOT NULL ,
   `password` VARCHAR(45) NOT NULL ,
   `salt` VARCHAR(45) NOT NULL ,
-  `state` TINYINT(1) NOT NULL ,
   `isadmin` TINYINT(1) NOT NULL ,
   `balance` INT NOT NULL ,
   PRIMARY KEY (`userID`) ,
@@ -46,7 +45,7 @@ ENGINE = InnoDB;
 -- Table `bet_system`.`Complaint`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `bet_system`.`Complaint` (
-  `complaintID` INT NOT NULL ,
+  `complaintID` INT NOT NULL AUTO_INCREMENT ,
   `User_userID1` INT NOT NULL ,
   `User_userID2` INT NOT NULL ,
   `state` TINYINT(1) NOT NULL ,
@@ -71,7 +70,7 @@ ENGINE = InnoDB;
 -- Table `bet_system`.`Sport`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `bet_system`.`Sport` (
-  `sportID` INT NOT NULL ,
+  `sportID` INT NOT NULL AUTO_INCREMENT ,
   `title` VARCHAR(45) NOT NULL ,
   `description` TEXT NULL ,
   PRIMARY KEY (`sportID`) )
@@ -120,7 +119,7 @@ ENGINE = InnoDB;
 -- Table `bet_system`.`Season`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `bet_system`.`Season` (
-  `seasonID` INT NOT NULL ,
+  `seasonID` INT NOT NULL AUTO_INCREMENT ,
   `begin_date` DATETIME NOT NULL ,
   `end_date` DATETIME NOT NULL ,
   PRIMARY KEY (`seasonID`) )
@@ -196,7 +195,7 @@ ENGINE = InnoDB;
 -- Table `bet_system`.`Combibet`
 -- -----------------------------------------------------
 CREATE  TABLE IF NOT EXISTS `bet_system`.`Combibet` (
-  `combibetID` INT NOT NULL ,
+  `combibetID` INT NOT NULL AUTO_INCREMENT ,
   `User_userID` INT NOT NULL ,
   PRIMARY KEY (`combibetID`) ,
   INDEX `fk_Combibet_User1_idx` (`User_userID` ASC) ,
@@ -414,36 +413,36 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `bet_system`;
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (1, 'wurst', 'hans', 'hans@wurst.de', 'a', 'hanswurst', 'x', 'x', true, false, 200);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (2, 'hermann', 'günther', 'günther@hermann', 'a', 'ghermann', 'x', 'x', true, false, 100);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (3, 'Rompf', 'Kevin', 'kevin.rompf@mni.thm.de', 't', 'kevin', 'x', 'x', true, true, 0);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (4, 'Bakkal', 'Selcuk', 'selcukbakkal@hotmail.de', 'b', 'selcuk', 'x', 'x', true, true, 200);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (5, 'Becker', 'Lars', 'lars.becker@mni.thm.de', 'e', 'lars', 'x', 'x', true, true, 200);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (6, 'Naumann', 'Julian', 'julian.naumann@mni.thm.de', 'b', 'julian', 'x', 'x', true, true, 0);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (7, 'janauschek', 'peter', 'peter.janauschek@mni.thm.de', 'e', 'peter', 'x', 'x', true, true, 200);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (8, 'schlosser', 'benjamin', 'benjamin.schlosser@mni.thm.de', 'b', 'benjamin', 'x', 'x', true, true, 0);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (9, 'nachname9', 'vorname9', 'test9@email.de', 'c', 'nutzer9', 'x', 'x', false, false, 0);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (10, 'nachname10', 'vorname10', 'test10@email.de', 'c', 'nutzer10', 'x', 'x', false, true, 200);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (11, 'nachname11', 'vorname11', 'test11@email.de', 'c', 'nutzer11', 'x', 'x', false, false, 0);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (12, 'nachname12', 'vorname12', 'test12@email.de', 'd', 'nutzer12', 'x', 'x', true, false, 200);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (13, 'nachname13', 'vorname13', 'test13@email.de', 'd', 'nutzer13', 'x', 'x', false, false, 100);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (14, 'nachname14', 'vorname14', 'test14@email.de', 't', 'nutzer14', 'x', 'x', true, false, 0);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (15, 'nachname15', 'vorname15', 'test15@email.de', 'd', 'nutzer15', 'x', 'x', true, false, 200);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (16, 'nachname16', 'vorname16', 'test16@email.de', 'r', 'nutzer16', 'x', 'x', false, true, 200);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (17, 'nachname17', 'vorname17', 'test17@email.de', 'd', 'nutzer17', 'x', 'x', true, false, 100);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (18, 'nachname18', 'vorname18', 'test18@email.de', 'd', 'nutzer18', 'x', 'x', true, false, 0);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (19, 'nachname19', 'vorname19', 'test19@email.de', 'f', 'nutzer19', 'x', 'x', true, true, 0);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (20, 'nachname20', 'vorname20', 'test20@email.de', 'f', 'nutzer20', 'x', 'x', true, true, 200);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (21, 'nachname21', 'vorname21', 'test21@email.de', 'a', 'nutzer21', 'x', 'x', true, true, 0);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (22, 'nachname22', 'vorname22', 'test22@email.de', 'a', 'nutzer22', 'x', 'x', false, false, 0);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (23, 'nachname23', 'vorname23', 'test23@email.de', 't', 'nutzer23', 'x', 'x', false, true, 200);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (24, 'nachname24', 'vorname24', 'test24@email.de', 'b', 'nutzer24', 'x', 'x', false, false, 0);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (25, 'nachname25', 'vorname25', 'test25@email.de', 'e', 'nutzer25', 'x', 'x', true, false, 200);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (26, 'nachname26', 'vorname26', 'test26@email.de', 'b', 'nutzer26', 'x', 'x', false, false, 100);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (27, 'nachname27', 'vorname27', 'test27@email.de', 'e', 'nutzer27', 'x', 'x', true, false, 0);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (28, 'nachname28', 'vorname28', 'test28@email.de', 'b', 'nutzer28', 'x', 'x', true, false, 200);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (29, 'nachname29', 'vorname29', 'test29@email.de', 'c', 'nutzer29', 'x', 'x', false, true, 200);
-INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `state`, `isadmin`, `balance`) VALUES (30, 'nachname30', 'vorname30', 'test30@email.de', 'c', 'nutzer30', 'x', 'x', true, false, 100);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (1, 'wurst', 'hans', 'hans@wurst.de', 'a', 'hanswurst', 'x', 'x', false, 200);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (2, 'hermann', 'günther', 'günther@hermann', 'a', 'ghermann', 'x', 'x', false, 100);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (3, 'Rompf', 'Kevin', 'kevin.rompf@mni.thm.de', 't', 'kevin', 'x', 'x', true, 0);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (4, 'Bakkal', 'Selcuk', 'selcukbakkal@hotmail.de', 'b', 'selcuk', 'x', 'x', true, 200);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (5, 'Becker', 'Lars', 'lars.becker@mni.thm.de', 'e', 'lars', 'x', 'x', true, 200);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (6, 'Naumann', 'Julian', 'julian.naumann@mni.thm.de', 'b', 'julian', 'x', 'x', true, 0);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (7, 'janauschek', 'peter', 'peter.janauschek@mni.thm.de', 'e', 'peter', 'x', 'x', true, 200);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (8, 'schlosser', 'benjamin', 'benjamin.schlosser@mni.thm.de', 'b', 'benjamin', 'x', 'x', true, 0);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (9, 'nachname9', 'vorname9', 'test9@email.de', 'c', 'nutzer9', 'x', 'x', false, 0);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (10, 'nachname10', 'vorname10', 'test10@email.de', 'c', 'nutzer10', 'x', 'x', true, 200);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (11, 'nachname11', 'vorname11', 'test11@email.de', 'c', 'nutzer11', 'x', 'x', false, 0);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (12, 'nachname12', 'vorname12', 'test12@email.de', 'd', 'nutzer12', 'x', 'x', false, 200);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (13, 'nachname13', 'vorname13', 'test13@email.de', 'd', 'nutzer13', 'x', 'x', false, 100);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (14, 'nachname14', 'vorname14', 'test14@email.de', 't', 'nutzer14', 'x', 'x', false, 0);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (15, 'nachname15', 'vorname15', 'test15@email.de', 'd', 'nutzer15', 'x', 'x', false, 200);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (16, 'nachname16', 'vorname16', 'test16@email.de', 'r', 'nutzer16', 'x', 'x', true, 200);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (17, 'nachname17', 'vorname17', 'test17@email.de', 'd', 'nutzer17', 'x', 'x', false, 100);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (18, 'nachname18', 'vorname18', 'test18@email.de', 'd', 'nutzer18', 'x', 'x', false, 0);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (19, 'nachname19', 'vorname19', 'test19@email.de', 'f', 'nutzer19', 'x', 'x', true, 0);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (20, 'nachname20', 'vorname20', 'test20@email.de', 'f', 'nutzer20', 'x', 'x', true, 200);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (21, 'nachname21', 'vorname21', 'test21@email.de', 'a', 'nutzer21', 'x', 'x', true, 0);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (22, 'nachname22', 'vorname22', 'test22@email.de', 'a', 'nutzer22', 'x', 'x', false, 0);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (23, 'nachname23', 'vorname23', 'test23@email.de', 't', 'nutzer23', 'x', 'x', true, 200);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (24, 'nachname24', 'vorname24', 'test24@email.de', 'b', 'nutzer24', 'x', 'x', false, 0);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (25, 'nachname25', 'vorname25', 'test25@email.de', 'e', 'nutzer25', 'x', 'x', false, 200);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (26, 'nachname26', 'vorname26', 'test26@email.de', 'b', 'nutzer26', 'x', 'x', false, 100);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (27, 'nachname27', 'vorname27', 'test27@email.de', 'e', 'nutzer27', 'x', 'x', false, 0);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (28, 'nachname28', 'vorname28', 'test28@email.de', 'b', 'nutzer28', 'x', 'x', false, 200);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (29, 'nachname29', 'vorname29', 'test29@email.de', 'c', 'nutzer29', 'x', 'x', true, 200);
+INSERT INTO `bet_system`.`User` (`userID`, `name`, `firstname`, `email`, `city`, `username`, `password`, `salt`, `isadmin`, `balance`) VALUES (30, 'nachname30', 'vorname30', 'test30@email.de', 'c', 'nutzer30', 'x', 'x', false, 100);
 
 COMMIT;
 

@@ -3,7 +3,10 @@ session_start();
 
 if(isset($_SESSION["username"])){
 
-	include '../includes/connection.php';
+	include '../includes/connect.php';
+	
+	$mysql = new Mysql();
+	$mysql->connect();
 
 	// Nachrichten nur von bestimmtesn Empfänger anzeigen lassen
 	echo 'Empfänger: <input type="text" name="empfaenger"';
@@ -11,24 +14,23 @@ if(isset($_SESSION["username"])){
 	echo '<input type="submit" value="senden" />';
 
 	//Datenbank auswählen.
-	mysql_select_db("bet_system") or die ("Datenbank nicht gefunden");
 
 	if(isset($_POST['senden'])){
 
 		$sql = "SELECT * FROM privatemessage WHERE User_sender = '".$_SESSION["userid"]."'";
 
-		$result=mysql_query($sql) or die ("Auslesen gescheitert.");
+		$result=$mysql->mysqli->query($sql) or die ("Auslesen gescheitert.");
 
 	}
 	else{
 
 		$sql = "SELECT * FROM privatemessage WHERE User_sender = '".$_SESSION["userid"]."'";
 
-		$result=mysql_query($sql) or die ("Auslesen gescheitert.");
+		$result=$mysql->mysqli->query($sql) or die ("Auslesen gescheitert.");
 
 	}
 
-	while ($zeile = mysql_fetch_array( $result, MYSQL_ASSOC))
+	while ($zeile = $result->fetch_array(MYSQL_ASSOC))
 	{
 		echo "<br>";
 		echo $zeile['User_reseiver'] ." ";
@@ -37,9 +39,6 @@ if(isset($_SESSION["username"])){
 		<?php
 		echo $zeile['User_sender'] . "<br>";
 	}
-	?>
-	<a href="angemeldet.php">angemeldet</a>
-	<?php
 }
 else{
 	?>
