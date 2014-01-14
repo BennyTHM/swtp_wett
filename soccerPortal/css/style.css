@@ -532,6 +532,7 @@ a         		{
 				float:left;
 				height:53px;
 				width:121px;
+				cursor:pointer;
 				background-image:url(../images/site/frontend/leftbtn.png);
 				}
 .leftBtn:hover	{
@@ -541,6 +542,7 @@ a         		{
 				height:53px;
 				width:111px;
 				float:left;
+				cursor:pointer;
 				background-image:url(../images/site/frontend/rightbtn.png);
 				}
 .rightBtn:hover	{

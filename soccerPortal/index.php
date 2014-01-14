@@ -100,7 +100,8 @@
 					<div class="sideBtn"><div id="about" class="sideBtnTxt">About</div></div></a>
 					<div class="sideBtn"><div id="agbs" class="sideBtnTxt">AGB's</div></div>
 					<div class="sideBtn"><div id="faq" class="sideBtnTxt">FAQ</div></div>
-					<div class="sideBtn last"><div id="impressum" class="sideBtnTxt">Impressum</div></div>
+					<div class="sideBtn"><div id="impressum" class="sideBtnTxt">Impressum</div></div>
+					<div class="sideBtn last"><div id="kontakt" class="sideBtnTxt">Kontakt</div></div>
 				</div>
 			</div> <!-- close sidebar-->
 			<div id="all">
