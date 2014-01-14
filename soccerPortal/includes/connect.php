@@ -10,6 +10,8 @@ class Mysql {
         public $userID;
         
         function connect(){
+				//Hier Datenbank-Daten eintragen.
+				//	                          adresse   benuter pw       datenbank
                 $this->mysqli = new mysqli("localhost","root","","bet_system");
                 return $this->link;
         }

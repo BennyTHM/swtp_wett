@@ -20,16 +20,15 @@ if (!$mysql->exist($email, $username)){
 
 	$isAdmin = false;
 	$balance = 100;
-	$state = 1;
 	$query = 
-	"insert into user (name, firstname, username, password, email, city, state, isAdmin, balance)"
-	 		."values ('{$name}', '{$firstname}', '{$username}', '{$password}', '{$email}', '{$city}', '{$state}', '{$isAdmin}', '{$balance}')";
+	"insert into user (name, firstname, username, password, email, city, isAdmin, balance)"
+	 		."values ('{$name}', '{$firstname}', '{$username}', '{$password}', '{$email}', '{$city}', '{$isAdmin}', '{$balance}')";
 	
 	$result = $mysql->mysqli->query($query);
 	if ($result){
 		echo "Erfolgreich registriert!";	
 		//TODO: hier anpassung nötig für die neue email funktion!
- 		sendEmail( $email,"Registrierung soccerportal", "Willkommen zum soccerPortal! Sie können sich nun mit diesem Passwort anmelden: ".$password);
+ 		sendEmail( $email,"Registrierung soccerPortal", "Willkommen zum soccerPortal! Sie können sich nun mit diesem Passwort anmelden: ".$password);
 	} else {
 		echo "Registrierung fehlgeschlagen: ". mysql_error();
 	}
