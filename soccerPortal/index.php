@@ -1,7 +1,6 @@
 <?php
 	//Session starten
 	session_start();
-	
 	$verhalten=0;	//das Seiten verhalten steuern
 	$blockiert=0;	//nicht blockiert
 	$aktiviert=0;	//aktiviert
@@ -143,7 +142,7 @@
 			
 		</div> <!-- close grapper -->
 		<div id="registerPopup">
-			<form action="index.php" method="post">
+			<form action="register.php" method="post">
 				<br />
 				Bitte geben Sie folgende Daten an:
 				<br /><br />
