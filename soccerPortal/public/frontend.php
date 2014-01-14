@@ -39,9 +39,9 @@ if(isset($_SESSION["username"])){
 							</div> <!-- close button1 -->
 								<div class ="dropspace">
 									<ul>
-										<li><a href="posteingang.php">Posteingang</a></li>
-										<li><a href="postausgang.php">Postausgang</a></li>
-										<li><a href="posteingang.php">Verfassen</a></li>
+										<li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco"><img src="../images/site/frontend/icons/messageIn.png"></img>&nbsp Posteingang</div></li>
+										<li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco"><img src="../images/site/frontend/icons/messageOut.png"></img>&nbsp Postausgang</div></li>
+										<li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco"><img src="../images/site/frontend/icons/createMessage.png"></img>&nbsp Verfassen</div></li>
 									</ul>
 								</div> <!-- close dropspace -->
 						</li>
@@ -54,9 +54,9 @@ if(isset($_SESSION["username"])){
 							</div> <!-- close button2 -->
 								<div class ="dropspace">
 									<ul>
-										<li><a href="posteingang.php">Einzelwetten</a></li>
-										<li><a href="postausgang.php">Komiwetten</a></li>
-										<li><a href="posteingang.php">aktive Wetten</a></li>
+										<li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco"><img src="../images/site/frontend/icons/messageIn.png"></img>&nbsp Posteingang</div></li>
+										<li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco"><img src="../images/site/frontend/icons/messageOut.png"></img>&nbsp Postausgang</div></li>
+										<li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco"><img src="../images/site/frontend/icons/createMessage.png"></img>&nbsp Verfassen</div></li>
 									</ul>
 								</div> <!-- close dropspace -->
 						</li>
@@ -69,9 +69,9 @@ if(isset($_SESSION["username"])){
 							</div> <!-- close button3 -->
 								<div class ="dropspace">
 									<ul>
-										<li><a href="posteingang.php">Einzelwetten</a></li>
-										<li><a href="postausgang.php">Komiwetten</a></li>
-										<li><a href="posteingang.php">aktive Wetten</a></li>
+										<li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco"><img src="../images/site/frontend/icons/messageIn.png"></img>&nbsp Posteingang</div></li>
+										<li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco"><img src="../images/site/frontend/icons/messageOut.png"></img>&nbsp Postausgang</div></li>
+										<li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco"><img src="../images/site/frontend/icons/createMessage.png"></img>&nbsp Verfassen</div></li>
 									</ul>
 								</div> <!-- close dropspace -->
 						</li>
@@ -84,9 +84,9 @@ if(isset($_SESSION["username"])){
 							</div> <!-- close button2 -->
 								<div class ="dropspace">
 									<ul>
-										<li><a href="posteingang.php">Einzelwetten</a></li>
-										<li><a href="postausgang.php">Komiwetten</a></li>
-										<li><a href="posteingang.php">aktive Wetten</a></li>
+										<li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco"><img src="../images/site/frontend/icons/messageIn.png"></img>&nbsp Posteingang</div></li>
+										<li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco"><img src="../images/site/frontend/icons/messageOut.png"></img>&nbsp Postausgang</div></li>
+										<li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco"><img src="../images/site/frontend/icons/createMessage.png"></img>&nbsp Verfassen</div></li>
 									</ul>
 								</div> <!-- close dropspace -->
 						</li>
@@ -99,9 +99,9 @@ if(isset($_SESSION["username"])){
 							</div> <!-- close button2 -->
 								<div class ="dropspace">
 									<ul>
-										<li><a href="posteingang.php">Einzelwetten</a></li>
-										<li><a href="postausgang.php">Komiwetten</a></li>
-										<li><a href="posteingang.php">aktive Wetten</a></li>
+										<li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco"><img src="../images/site/frontend/icons/messageIn.png"></img>&nbsp Posteingang</div></li>
+										<li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco"><img src="../images/site/frontend/icons/messageOut.png"></img>&nbsp Postausgang</div></li>
+										<li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco"><img src="../images/site/frontend/icons/createMessage.png"></img>&nbsp Verfassen</div></li>
 									</ul>
 								</div> <!-- close dropspace -->
 						</li>
@@ -114,9 +114,9 @@ if(isset($_SESSION["username"])){
 							</div> <!-- close button2 -->
 								<div class ="dropspace">
 									<ul>
-										<li><a href="posteingang.php">Einzelwetten</a></li>
-										<li><a href="postausgang.php">Komiwetten</a></li>
-										<li><a href="posteingang.php">aktive Wetten</a></li>
+										<li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco"><img src="../images/site/frontend/icons/messageIn.png"></img>&nbsp Posteingang</div></li>
+										<li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco"><img src="../images/site/frontend/icons/messageOut.png"></img>&nbsp Postausgang</div></li>
+										<li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco"><img src="../images/site/frontend/icons/createMessage.png"></img>&nbsp Verfassen</div></li>
 									</ul>
 								</div> <!-- close dropspace -->
 						</li>
@@ -129,9 +129,9 @@ if(isset($_SESSION["username"])){
 							</div> <!-- close button2 -->
 								<div class ="dropspace">
 									<ul>
-										<li><a href="posteingang.php">Einzelwetten</a></li>
-										<li><a href="postausgang.php">Komiwetten</a></li>
-										<li><a href="posteingang.php">aktive Wetten</a></li>
+										<li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco"><img src="../images/site/frontend/icons/messageIn.png"></img>&nbsp Posteingang</div></li>
+										<li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco"><img src="../images/site/frontend/icons/messageOut.png"></img>&nbsp Postausgang</div></li>
+										<li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco"><img src="../images/site/frontend/icons/createMessage.png"></img>&nbsp Verfassen</div></li>
 									</ul>
 								</div> <!-- close dropspace -->
 						</li>
