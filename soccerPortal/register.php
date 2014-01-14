@@ -16,7 +16,8 @@ $username = $_POST['username'];
 if (!$mysql->exist($email, $username)){
 	$password = $mysql->random_pwd(6);
 	//$salt = 
-	$state = false;
+	
+
 	$isAdmin = false;
 	$balance = 100;
 	

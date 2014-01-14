@@ -3,7 +3,7 @@
 	session_start();
 	$verhalten=0;	//das Seiten verhalten steuern
 	$blockiert=0;	//nicht blockiert
-	$aktiviert=0;	//aktiviert
+
 	$registriert=0;	//registriert
 	
 	include 'includes/connect.php';
