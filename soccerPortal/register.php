@@ -15,7 +15,7 @@ $username = $_POST['username'];
 
 if (!$mysql->exist($email, $username)){
 	$password = $mysql->random_pwd(6);
-	//$salt = 
+	
 	
 
 	$isAdmin = false;
@@ -28,7 +28,7 @@ if (!$mysql->exist($email, $username)){
 	if ($result){
 		echo "Erfolgreich registriert!";	
 		//TODO: hier anpassung nötig für die neue email funktion!
- 		sendEmail( $email,"Registrierung soccerPortal", "Willkommen zum soccerPortal! Sie können sich nun mit diesem Passwort anmelden: ".$password);
+ 		sendEmail($email,"Registrierung soccerPortal", "Willkommen zum soccerPortal! Sie können sich nun mit diesem Passwort anmelden: ".$password);
 	} else {
 		echo "Registrierung fehlgeschlagen: ". mysql_error();
 	}
