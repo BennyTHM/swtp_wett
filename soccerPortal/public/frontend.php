@@ -41,7 +41,7 @@ if(isset($_SESSION["username"])){
 									<ul>
 										<li><a href="posteingang.php">Posteingang</a></li>
 										<li><a href="postausgang.php">Postausgang</a></li>
-										<li><a href="posteingang.php">Verfassen</a></li>
+										<li><a href="pm.php">Verfassen</a></li>
 									</ul>
 								</div> <!-- close dropspace -->
 						</li>

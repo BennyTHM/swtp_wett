@@ -5,7 +5,10 @@ if(isset($_SESSION["username"])){
 
 $verhalten=0;
 
-include '../includes/connection.php';
+include '../includes/connect.php';
+	
+$mysql = new Mysql();
+$mysql->connect();
 
 if(!isset($_GET["page"])){
 	$verhalten=0;
@@ -15,8 +18,8 @@ if(isset($_GET["page"]) == "send"){
 	$verhalten=1;
 	$empfaenger=$_POST['empfaenger'];
 	$sqlEmpf = "SELECT UserID FROM user WHERE username = '". $empfaenger ."';";
-	$result=mysql_query($sqlEmpf) or die("Anfrage fehlgeschlagen: " . mysql_error());
-	$row = mysql_fetch_array($result);
+	$result=$mysql->mysqli->query(sqlEmpf) or die("Anfrage fehlgeschlagen: " . mysql_error());
+	$row = $result->fetch_array();
 	
 	//if(isset($row["userID"])){
 		$empfaenger=$row['UserID'];
@@ -26,7 +29,7 @@ if(isset($_GET["page"]) == "send"){
 		$sql = "INSERT INTO privatemessage(subject,message,User_reseiver,User_sender) 
 				VALUES('".$subjekt."', '".$message."', '".$empfaenger."', '".$_SESSION["userid"]."');";
 
-		$erg=mysql_query($sql) or die("Anfrage fehlgeschlagen: " . mysql_error());
+		$erg=$mysql->mysqli->query($sql) or die("Anfrage fehlgeschlagen: " . mysql_error());
 
 		if($erg == true){
 			echo 'Nachricht wurde erfolgreich gesendet!';

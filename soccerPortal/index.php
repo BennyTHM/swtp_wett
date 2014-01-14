@@ -3,10 +3,15 @@
 	session_start();
 	$verhalten=0;	//das Seiten verhalten steuern
 	$blockiert=0;	//nicht blockiert
-	$aktiviert=0;	//aktiviert
+
 	$registriert=0;	//registriert
 	
-	include 'includes/connection.php';
+	include 'includes/connect.php';
+	
+	$mysql = new Mysql();
+	$mysql->connect();
+	
+	
 	
 	//Standard ausgabe
 	if(!isset($_SESSION["username"]) and !isset($_GET["page"])){
@@ -18,26 +23,22 @@
 		
 		//Datenbank nach dem User und seinem Passwort durchsuchen
 		$sql="SELECT * FROM user WHERE email='".$_POST["e-mail"]."' AND password='".$_POST["passwort"]."';";
-		$result=mysql_query($sql) or die ("Auslesen gescheitert");
+		$result=$mysql->mysqli->query($sql) or die ("Auslesen gescheitert");
 		
 		//Inhalt des Datensatzes in $row schreiben
-		$row = mysql_fetch_assoc($result);
+		$row = $result->fetch_assoc();
+		
 		
 			//Wenn der Username und das Passwort übereinstimmen
 			if($row["email"]==$_POST["e-mail"] and $row["password"]==$_POST["passwort"]){
 				
-				//Überpfüfen ob der User sein Konto aktiviert hat
-				if($row["state"]!=1){
-					$verhalten=2;
-					$aktiviert=1;
-				}
-				else{
+				
 					//Tabelle blocked durchsuchen ob ein Eintrag vorhanden ist
 					$sql2="SELECT * FROM blocked WHERE User_userID='".$row["userID"]."';";
-					$result2=mysql_query($sql2) or die ("Auslesen gescheitert");
+					$result2=$mysql->mysqli->query($sql2) or die ("Auslesen gescheitert");
 					
 					//Inhalt des Datensatzes in $row2 schreiben
-					$row2 = mysql_fetch_assoc($result2);
+					$row2 = $result2->fetch_assoc();
 					
 					//Wenn ein Eintag in der Datenbank blocked vorhanden ist
 					if(isset($row2["User_userID"])){
@@ -52,7 +53,7 @@
 						$_SESSION["kontostand"]=$row["balance"];
 						$verhalten=1;
 					}
-				}
+				
 			}
 			//Wenn der Username und das Passwort nicht übereinstimmen
 			else{
