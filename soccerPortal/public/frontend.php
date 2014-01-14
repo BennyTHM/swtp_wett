@@ -54,9 +54,10 @@ if(isset($_SESSION["username"])){
               </div> <!-- close button2 -->
                 <div class ="dropspace">
                   <ul>
-                    <li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco"><img src="../images/site/frontend/icons/messageIn.png"></img>&nbsp Posteingang</div></li>
-                    <li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco"><img src="../images/site/frontend/icons/messageOut.png"></img>&nbsp Postausgang</div></li>
-                    <li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco"><img src="../images/site/frontend/icons/createMessage.png"></img>&nbsp Verfassen</div></li>
+                    <li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco">&nbsp Einzelwette</div></li>
+                    <li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco">&nbsp Kombiwette</div></li>
+                    <li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco">&nbsp Aktive Wetten</div></li>
+                    <li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco">&nbsp Alte Wetten</div></li>
                   </ul>
                 </div> <!-- close dropspace -->
             </li>
@@ -67,13 +68,6 @@ if(isset($_SESSION["username"])){
               <div id="button3" class="rightBtn">
                 <div class="frontbtnsTxt">Home</div>
               </div> <!-- close button3 -->
-                <div class ="dropspace">
-                  <ul>
-                    <li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco"><img src="../images/site/frontend/icons/messageIn.png"></img>&nbsp Posteingang</div></li>
-                    <li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco"><img src="../images/site/frontend/icons/messageOut.png"></img>&nbsp Postausgang</div></li>
-                    <li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco"><img src="../images/site/frontend/icons/createMessage.png"></img>&nbsp Verfassen</div></li>
-                  </ul>
-                </div> <!-- close dropspace -->
             </li>
           </ul>
 
@@ -82,13 +76,6 @@ if(isset($_SESSION["username"])){
               <div id="button4" class="rightBtn">
                 <div class="frontbtnsTxt">Bestenliste</div>
               </div> <!-- close button2 -->
-                <div class ="dropspace">
-                  <ul>
-                    <li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco"><img src="../images/site/frontend/icons/messageIn.png"></img>&nbsp Posteingang</div></li>
-                    <li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco"><img src="../images/site/frontend/icons/messageOut.png"></img>&nbsp Postausgang</div></li>
-                    <li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco"><img src="../images/site/frontend/icons/createMessage.png"></img>&nbsp Verfassen</div></li>
-                  </ul>
-                </div> <!-- close dropspace -->
             </li>
           </ul>
 
@@ -99,9 +86,8 @@ if(isset($_SESSION["username"])){
               </div> <!-- close button2 -->
                 <div class ="dropspace">
                   <ul>
-                    <li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco"><img src="../images/site/frontend/icons/messageIn.png"></img>&nbsp Posteingang</div></li>
-                    <li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco"><img src="../images/site/frontend/icons/messageOut.png"></img>&nbsp Postausgang</div></li>
-                    <li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco"><img src="../images/site/frontend/icons/createMessage.png"></img>&nbsp Verfassen</div></li>
+                    <li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco">&nbsp Eigenes Profil</div></li>
+                    <li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco">&nbsp Profil bearbeiten</div></li>
                   </ul>
                 </div> <!-- close dropspace -->
             </li>
@@ -114,9 +100,9 @@ if(isset($_SESSION["username"])){
               </div> <!-- close button2 -->
                 <div class ="dropspace">
                   <ul>
-                    <li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco"><img src="../images/site/frontend/icons/messageIn.png"></img>&nbsp Posteingang</div></li>
-                    <li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco"><img src="../images/site/frontend/icons/messageOut.png"></img>&nbsp Postausgang</div></li>
-                    <li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco"><img src="../images/site/frontend/icons/createMessage.png"></img>&nbsp Verfassen</div></li>
+                    <li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco">&nbsp 1. Liga</div></li>
+                    <li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco">&nbsp 2. Liga</div></li>
+                    <li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco">&nbsp 3. Liga</div></li>
                   </ul>
                 </div> <!-- close dropspace -->
             </li>
@@ -127,13 +113,6 @@ if(isset($_SESSION["username"])){
               <div id="button7" class="rightBtn last">
                 <div class="frontbtnsTxt">WM</div>
               </div> <!-- close button2 -->
-                <div class ="dropspace">
-                  <ul>
-                    <li class="navitem"><div id="posteingang" class="innerdrp"><div id="mInIco"><img src="../images/site/frontend/icons/messageIn.png"></img>&nbsp Posteingang</div></li>
-                    <li class="navitem"><div id="postausgang" class="innerdrp"><div id="mOutIco"><img src="../images/site/frontend/icons/messageOut.png"></img>&nbsp Postausgang</div></li>
-                    <li class="navitem"><div id="verfassen" class="innerdrp"><div id="mCreIco"><img src="../images/site/frontend/icons/createMessage.png"></img>&nbsp Verfassen</div></li>
-                  </ul>
-                </div> <!-- close dropspace -->
             </li>
           </ul>
 
