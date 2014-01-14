@@ -18,6 +18,7 @@ while ($zeile = $result->fetch_array(MYSQL_ASSOC))
   echo $zeile['User_reseiver'] ." ";
   ?>
 	<a href="message.php"><?php echo $zeile['subject']; ?></a>
+	<input type='hidden' name='mnr' value='<?php $zeile['privateMessagesId'] ?>'/>
   <?php
   echo $zeile['User_sender'] . "<br>";
 }

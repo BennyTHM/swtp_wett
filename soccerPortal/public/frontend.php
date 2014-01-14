@@ -22,7 +22,6 @@ if(isset($_SESSION["username"])){
 
 </head>
 <body>
-<<<<<<< HEAD
   <div id="frontendHead">
     <div id="frontendNavi">
       <div id="logoSpacer">
