@@ -1,14 +1,14 @@
 <h2>FAQ</h2>
 
-<h3>1. Was ist dies für eine Webseite?</h3>
+<h3>1. Was ist dies fuer eine Webseite?</h3>
 
-<p>Willkommen! Das soccerPortal ist ein Online-Wettbüro mit dem du mit anderen Benutzern kommunizieren und verschiedene Arten von Wetten auf reale Fußball-Begegnungen 
-abschließen kannst. Solltest du richtig liegen bekommst du einen Gewinn gutgeschrieben.</p>
+<p>Willkommen! Das soccerPortal ist ein Online-Wettbuero mit dem du mit anderen Benutzern kommunizieren und verschiedene Arten von Wetten auf reale Fussball-Begegnungen 
+abschliessen kannst. Solltest du richtig liegen bekommst du einen Gewinn gutgeschrieben.</p>
 
-<h3>2. Was für Wetten gibt es?</h3>
+<h3>2. Was fuer Wetten gibt es?</h3>
 
 <p>Bis jetzt gibt es eine einfache Wette bei der du auf folgende Ereignisse wetten kannst: "Unentschieden", "Mannschaft A gewinnt", "Mannschaft B gewinnt". Dann gibt es noch 
-die Kombinationswette, bei denen du mehrere Wetten gleichzeitig und zusammenhängend abschließen kannst. Solltest bei jeder Wette richtig liegen, dann multiplizieren sich die Quoten! Solltest
+die Kombinationswette, bei denen du mehrere Wetten gleichzeitig und zusammenhaengend abschliessen kannst. Solltest bei jeder Wette richtig liegen, dann multiplizieren sich die Quoten! Solltest
 du jedoch falsch liegen, dann gehst du leer aus. Es sind aber noch mehr Wettarten geplant...</p>
 
 <h3>3. Wer darf wetten?</h3>
@@ -25,13 +25,13 @@ du jedoch falsch liegen, dann gehst du leer aus. Es sind aber noch mehr Wettarte
 
 <h3>6. Wie kann ich mit den Admins Kontakt aufnehmen?</h3>
 
-<p>Unter "Kontakt"(oben in der Navigation) findest du ein Eingabeformular, das für diesen Zweck gedacht ist</p>
+<p>Unter "Kontakt"(oben in der Navigation) findest du ein Eingabeformular, das fuer diesen Zweck gedacht ist</p>
 
 <h3>7. Muss Javascript im Browser aktiviert sein, damit diese Website funktioniert?</h3>
 
-<p>Ja, sonst können wir unsere Funktionalitäten leider nicht gewährleisten.</p>
+<p>Ja, sonst koennen wir unsere Funktionalitäten leider nicht gewaehrleisten.</p>
 
-<h3>8. Welche Browser werden unterstützt?</h3>
+<h3>8. Welche Browser werden unterstuetzt?</h3>
 
 <p>Chrome und Firefox. Internet Explorer wird später noch reingenommen.</p>
 
