@@ -41,6 +41,10 @@ $(document).ready(function(){
 		$( "#inhalt" ).load( "public/faq.php");
 		document.getElementById('top').innerHTML='FAQ´s:';
 	});
+	$("#kontakt").click(function(){
+		$( "#inhalt" ).load( "public/kontakt.php");
+		document.getElementById('top').innerHTML='Kontakt:';
+	});
 	$("#impressum").click(function(){
 		$( "#inhalt" ).load( "public/impressum.php");
 		document.getElementById('top').innerHTML='Impressum:';
