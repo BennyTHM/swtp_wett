@@ -3,13 +3,16 @@ session_start();
 
 if(isset($_SESSION["username"])){
 
-include '../includes/connection.php';
+include '../includes/connect.php';
+	
+$mysql = new Mysql();
+$mysql->connect();
 
 $sql = "SELECT * FROM privatemessage WHERE User_reseiver = '".$_SESSION["userid"]."'";
 
-$result=mysql_query($sql) or die ("Auslesen gescheitert.");
-
-while ($zeile = mysql_fetch_array( $result, MYSQL_ASSOC))
+$result=$mysql->mysqli->query($sql) or die ("Auslesen gescheitert.");
+echo "Feuer Frei";
+while ($zeile = $result->fetch_array(MYSQL_ASSOC))
 {
   echo "<br>";
   echo $zeile['User_reseiver'] ." ";
@@ -18,9 +21,6 @@ while ($zeile = mysql_fetch_array( $result, MYSQL_ASSOC))
   <?php
   echo $zeile['User_sender'] . "<br>";
 }
-?>
-<a href="angemeldet.php">angemeldet</a>
-<?php
 }
 else{
 ?>
