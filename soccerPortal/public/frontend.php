@@ -12,6 +12,7 @@ if(isset($_SESSION["username"])){
 <title>Soccer Portal</title>
 
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/dropdown.css" rel="stylesheet" type="text/css" />
 <link rel="SHORTCUT ICON" href="../sp.ico" type="image/x-icon">
 
 <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
@@ -29,13 +30,115 @@ if(isset($_SESSION["username"])){
 		
 		<div id="navspace">
 			<div id="navBtns">
-				<a href="https://www.google.de/?gws_rd=cr&ei=qGanUpXAMcf2ygOzwYCQDA"><div id="button1" class="leftBtn"><div class="frontbtnsTxt">Nachrichten</div></div></a>
-				<div id="button2" class="rightBtn"><div class="frontbtnsTxt">Wetten</div></div>
-				<div id="button3" class="rightBtn"><div class="frontbtnsTxt">Home</div></div>
-				<div id="button4" class="rightBtn"><div class="frontbtnsTxt">Bestenliste</div></div>
-				<div id="button5" class="rightBtn"><div class="frontbtnsTxt">Profil</div></div>
-				<div id="button6" class="rightBtn"><div class="frontbtnsTxt">Ligen</div></div>
-				<div id="button7" class="rightBtn last"><div class="frontbtnsTxt">WM</div></div>
+				
+				<div id="nav">
+					<ul>	
+						<li>
+							<div id="button1" class="leftBtn">
+								<div class="frontbtnsTxt">Nachrichten</div>
+							</div> <!-- close button1 -->
+								<div class ="dropspace">
+									<ul>
+										<li><a href="posteingang.php">Posteingang</a></li>
+										<li><a href="postausgang.php">Postausgang</a></li>
+										<li><a href="posteingang.php">Verfassen</a></li>
+									</ul>
+								</div> <!-- close dropspace -->
+						</li>
+					</ul>
+					
+					<ul>	
+						<li>
+							<div id="button2" class="rightBtn">
+								<div class="frontbtnsTxt">Wetten</div>
+							</div> <!-- close button2 -->
+								<div class ="dropspace">
+									<ul>
+										<li><a href="posteingang.php">Einzelwetten</a></li>
+										<li><a href="postausgang.php">Komiwetten</a></li>
+										<li><a href="posteingang.php">aktive Wetten</a></li>
+									</ul>
+								</div> <!-- close dropspace -->
+						</li>
+					</ul>
+					
+					<ul>	
+						<li>
+							<div id="button3" class="rightBtn">
+								<div class="frontbtnsTxt">Home</div>
+							</div> <!-- close button3 -->
+								<div class ="dropspace">
+									<ul>
+										<li><a href="posteingang.php">Einzelwetten</a></li>
+										<li><a href="postausgang.php">Komiwetten</a></li>
+										<li><a href="posteingang.php">aktive Wetten</a></li>
+									</ul>
+								</div> <!-- close dropspace -->
+						</li>
+					</ul>
+					
+					<ul>	
+						<li>
+							<div id="button4" class="rightBtn">
+								<div class="frontbtnsTxt">Bestenliste</div>
+							</div> <!-- close button2 -->
+								<div class ="dropspace">
+									<ul>
+										<li><a href="posteingang.php">Einzelwetten</a></li>
+										<li><a href="postausgang.php">Komiwetten</a></li>
+										<li><a href="posteingang.php">aktive Wetten</a></li>
+									</ul>
+								</div> <!-- close dropspace -->
+						</li>
+					</ul>
+					
+					<ul>	
+						<li>
+							<div id="button5" class="rightBtn">
+								<div class="frontbtnsTxt">Profil</div>
+							</div> <!-- close button2 -->
+								<div class ="dropspace">
+									<ul>
+										<li><a href="posteingang.php">Einzelwetten</a></li>
+										<li><a href="postausgang.php">Komiwetten</a></li>
+										<li><a href="posteingang.php">aktive Wetten</a></li>
+									</ul>
+								</div> <!-- close dropspace -->
+						</li>
+					</ul>
+					
+					<ul>	
+						<li>
+							<div id="button6" class="rightBtn">
+								<div class="frontbtnsTxt">Ligen</div>
+							</div> <!-- close button2 -->
+								<div class ="dropspace">
+									<ul>
+										<li><a href="posteingang.php">Einzelwetten</a></li>
+										<li><a href="postausgang.php">Komiwetten</a></li>
+										<li><a href="posteingang.php">aktive Wetten</a></li>
+									</ul>
+								</div> <!-- close dropspace -->
+						</li>
+					</ul>
+					
+					<ul>	
+						<li>
+							<div id="button7" class="rightBtn last">
+								<div class="frontbtnsTxt">WM</div>
+							</div> <!-- close button2 -->
+								<div class ="dropspace">
+									<ul>
+										<li><a href="posteingang.php">Einzelwetten</a></li>
+										<li><a href="postausgang.php">Komiwetten</a></li>
+										<li><a href="posteingang.php">aktive Wetten</a></li>
+									</ul>
+								</div> <!-- close dropspace -->
+						</li>
+					</ul>
+					
+					</div> <!-- close nav -->
+				
 			</div> <!-- close navBtns -->
 			<div id="navgreen"></div>
 		</div> <!-- close navspace -->
