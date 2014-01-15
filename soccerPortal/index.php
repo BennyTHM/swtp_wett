@@ -1,5 +1,5 @@
 <?php
-	//Session starten
+	//Session starten.
 	session_start();
 	$verhalten=0;	//das Seiten verhalten steuern
 	$blockiert=0;	//nicht blockiert
