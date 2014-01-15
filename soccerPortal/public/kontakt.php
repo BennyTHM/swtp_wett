@@ -22,9 +22,9 @@
 			<label for="betreff">Betreff:</label>
 			<select id="betreff" name="betreff">
 				<option value="Frage">Frage</option>
-				<option value="Frage">Kritik</option>
-				<option value="Frage">Benutzer-Beschwerde</option>
-				<option value="Frage">Bestechungen</option>
+				<option value="Kritik">Kritik</option>
+				<option value="Benutzer-Beschwerde">Benutzer-Beschwerde</option>
+				<option value="Bestechungen">Bestechungen</option>
 			</select>
 		</li>
 		<li>

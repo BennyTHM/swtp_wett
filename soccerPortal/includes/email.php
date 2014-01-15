@@ -16,7 +16,7 @@ $message = Swift_Message::newInstance($betreff)
   ->setBody($text);
 
 	$mailer->send($message);
-	echo "Nachricht versendet";
+	echo "Nachricht erfolgreich an [ ".$wohin." ] versendet. \n";
 
 }
 

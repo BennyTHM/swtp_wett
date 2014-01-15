@@ -14,10 +14,10 @@ if(isset($_POST["email"])){
 	
 	$count = 0;
 	while ($row = $result->fetch_assoc()) {
-	sendEmail($row["email"],"Kontakt wegen ".$_POST["betreff"],$_POST["message"]);
+	sendEmail($row["email"],"Kontakt wegen ".$_POST["betreff"],"Anfrage von Email: ".$_POST["email"]." \n".$_POST["message"]);
 	$count=$count+1;
 	}
-	echo "Danke, ihre Kontaktanfrage wird an die Admins weitergeleitet. ";
+	echo "Danke, ihre Kontaktanfrage wird an die Admins weitergeleitet. \n";
 
 	
 }else{
