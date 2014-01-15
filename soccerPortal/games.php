@@ -18,7 +18,7 @@ $_SESSION['mysql'] = $mysql;
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
 </head>
-<script src="/js/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 <body>
 <script>
