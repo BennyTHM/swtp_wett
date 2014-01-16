@@ -130,7 +130,6 @@ if(isset($_SESSION["username"])){
     </div> <!-- close score -->
 
     <div id="profilspacer">
-      <a href="http://en.wikipedia.org/wiki/Gandalf">
         <div id="profilPic"></div>
       </a>
     </div> <!-- close profilspacer -->

@@ -44,6 +44,10 @@ $(document).ready(function() {
 		$( "#inhalt" ).load( "profil.php");
 		document.getElementById('top').innerHTML='Profil:';
 	});
+	$("#profilPic").click(function(){
+		$( "#inhalt" ).load( "profil.php");
+		document.getElementById('top').innerHTML='Profil:';
+	});
 	$("#profilAnsicht").click(function(){
 		$( "#inhalt" ).load( "profil.php");
 		document.getElementById('top').innerHTML='Profil:';
