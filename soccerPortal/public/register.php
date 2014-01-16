@@ -1,6 +1,6 @@
  <?php
 
-include 'includes/connect.php';
+include '../includes/connect.php';
 
 $mysql = new Mysql();
 
@@ -28,7 +28,7 @@ if (!$mysql->exist($email, $username)){
 	if ($result){
 		echo "Erfolgreich registriert!";	
 		//TODO: hier anpassung nötig für die neue email funktion!
- 		sendEmail($email,"Registrierung soccerPortal", "Willkommen zum soccerPortal! Sie können sich nun mit diesem Passwort anmelden: ".$password);
+ 		sendEmail($email,"Registrierung soccerPortal", "Willkommen zum soccerPortal!\n\nSie können sich nun mit diesen Daten anmelden:\nE-Mail: ".$email."\nPasswort: ".$password."\n\nIhr soccerPortal-Team");
 	} else {
 		echo "Registrierung fehlgeschlagen: ". mysql_error();
 	}
