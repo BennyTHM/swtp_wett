@@ -1,1 +1,0 @@
-Nur zum pushen der Ordner kann sobald inhalt vorhanden ist gelöscht werden!
