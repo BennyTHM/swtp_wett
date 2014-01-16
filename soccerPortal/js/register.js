@@ -1,5 +1,6 @@
 $(document).ready(function(){	
 	
+	//Register Popup
 	//open = false, da es beim Seitenaufbau geschlossen sein soll
 	var open = false;
 	
@@ -22,6 +23,33 @@ $(document).ready(function(){
 			//Ausblenden
 			$("#registerPopup").fadeOut("normal");
 			open=false;
+		}
+	});
+	
+	
+	//Passwort vergessen
+	//open = false, da es beim Seitenaufbau geschlossen sein soll
+	var open2 = false;
+	
+	//Das es zu anfang ausgeblendet wird
+	$("#pwvergessenPopup").hide();
+	
+	//Bei Klick auf den Registrierenbutton
+	$("#pwvergessen").click(function(){
+	
+		//Wenn das Popup geschlossen ist
+		if(open2 == false){
+			//Einblenden
+			$("#pwvergessenPopup").fadeIn("normal");
+			//Das macht das popup beweglich
+			$("#pwvergessenPopup").draggable();
+			open2=true;
+		}		
+		//Wenn das Popup geöffnet ist
+		else{
+			//Ausblenden
+			$("#pwvergessenPopup").fadeOut("normal");
+			open2=false;
 		}
 	});
 	

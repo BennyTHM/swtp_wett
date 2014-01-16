@@ -44,6 +44,7 @@ a         		{
 				position:absolute;
 				top: 27px;
 				margin-left:116px;
+				cursor:pointer;
 				}
 /* Class für den Registerbutton, erweitert bannerBtn */				
 .registerBtn	{
@@ -1053,9 +1054,28 @@ a         		{
 /* ENDE Register Popup											*/
 /*--------------------------------------------------------------*/	
 
+/*--------------------------------------------------------------*/	
+/* START Passwort vergessen Popup											*/
+/*--------------------------------------------------------------*/	
 
+#pwvergessenPopup{
+	z-index:1000;
+	width:325px;
+	height:403px;
+	position:fixed;
+	top:150px;
+	left:525px;
+	background-image: url(../images/site/popup/registerPopup.png);
+}
 
+/*--------------------------------------------------------------*/	
+/* ENDE Passwort vergessen Popup											*/
+/*--------------------------------------------------------------*/	
 
+#pwvergessen{
+	cursor:pointer;
+	color:green;	
+}
 
 
 

@@ -116,6 +116,9 @@
 							<input class="formfield inset" type="password" name="passwort" value="Passwort">
 							<input type="submit" class="loginBtn" value="">
 						</form>
+						<div id="pwvergessen">
+							Passwort vergessen?
+						</div>
 					</div> <!-- close loginH -->
 				</div> <!-- close header -->
 				
@@ -164,6 +167,11 @@
 				<br />
 				(*) Pflichtfelder
 			</form>
+		</div>
+		<div id="pwvergessenPopup">
+			<?php
+				include 'public/pwvergessen.php';
+			?>
 		</div>
 	<?php
 		}
