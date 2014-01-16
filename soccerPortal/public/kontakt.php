@@ -10,7 +10,7 @@
 ?>
 
 
-<form action="bearbeiteKontaktanfrage.php" method="post">
+<form action="public/bearbeiteKontaktanfrage.php" method="post">
 	<ul>
 		<li>
 			<label for "email">Email:</label>

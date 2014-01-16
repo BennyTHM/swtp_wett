@@ -148,7 +148,7 @@
 			
 		</div> <!-- close grapper -->
 		<div id="registerPopup">
-			<form action="register.php" method="post">
+			<form action="public/register.php" method="post">
 				<br />
 				Bitte geben Sie folgende Daten an:
 				<br /><br />
