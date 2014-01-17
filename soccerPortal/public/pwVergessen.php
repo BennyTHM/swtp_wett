@@ -1,1 +1,12 @@
-<h2>Passwort vergessen</h2>s
+<?php
+
+include '../includes/connect.php';
+
+$mysql = new Mysql();
+
+$mysql->connect();
+
+
+
+
+?>

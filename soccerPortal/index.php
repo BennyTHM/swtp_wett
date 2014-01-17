@@ -169,9 +169,19 @@
 			</form>
 		</div>
 		<div id="pwvergessenPopup">
-			<?php
-				include 'public/pwvergessen.php';
-			?>
+			<form action="public/pwVergessen.php" method="post">
+				<br />
+				<p>Sie haben leider ihr Passwort vergessen?</p>
+				<p>Geben Sie bitte folgende Daten an:</p>
+				
+				Username: <input class="formfield inset" type="text" name="username" value "Username">
+				<br />
+				E-Mail: <input class="formfield inset" type="text" name="e-mail" value "E-Mail">
+				<br /><br />
+				Wenn die Daten stimmen, bekommen Sie ein neues Passwort per E-Mail geschickt.
+				<br/><br />
+				<input type="submit" value="Senden">
+				</form>
 		</div>
 	<?php
 		}
