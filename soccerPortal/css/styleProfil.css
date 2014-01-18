@@ -1,0 +1,53 @@
+#profilAll{
+	margin-left:10%;
+	margin-right:10%;
+	background-color:white;
+}
+
+#divDaten{
+	left:250px;
+	right:250px;
+	top:100px;
+}
+
+#profilBild{
+	width:250px;
+	height:250px;
+	background-color:green;
+	float:left;
+}
+
+#profilDaten{
+	width:250px;
+	height:250px;
+	background-color:yellow;
+	float:right;
+}
+
+#profilBListe{
+	width:250px;
+	height:250px;
+	background-color:red;
+	position:absolute;
+	top:350px;
+	left:650px;
+}
+
+#profilStatWetten{
+	width:250px;
+	height:250px;
+	background-color:blue;
+	position:absolute;
+	top:350px;
+	left:250px;
+}
+
+#profilStatTeamWetten{
+	width:250px;
+	height:250px;
+	background-color:orange;
+	position:absolute;
+	top:700px;
+	left:100px;
+	right:100px;
+}

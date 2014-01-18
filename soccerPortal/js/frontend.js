@@ -41,19 +41,19 @@ $(document).ready(function() {
 	});
 	//Profil
 	$("#button5").click(function(){
-		$( "#inhalt" ).load( "profil.php");
+		$( "#frontcontent" ).load( "profil.php");
 		document.getElementById('top').innerHTML='Profil:';
 	});
 	$("#profilPic").click(function(){
-		$( "#inhalt" ).load( "profil.php");
+		$( "#frontcontent" ).load( "profil.php");
 		document.getElementById('top').innerHTML='Profil:';
 	});
 	$("#profilAnsicht").click(function(){
-		$( "#inhalt" ).load( "profil.php");
+		$( "#frontcontent" ).load( "profil.php");
 		document.getElementById('top').innerHTML='Profil:';
 	});
 	$("#profilBear").click(function(){
-		$( "#inhalt" ).load( "profilBear.php");
+		$( "#frontcontent" ).load( "profilBear.php");
 		document.getElementById('top').innerHTML='Profil bearbeiten:';
 	});
 	//tabellen der Ligen
