@@ -47,7 +47,7 @@ if($verhalten==0){
 ?>
 
 <form action="pm.php?page=send" method="post">
-	<p>Empfänger: <input type="text" name="empfaenger" /></p>
+	<p>Empf&auml;nger: <input type="text" name="empfaenger" /></p>
 	<p>Betreff: <input type="text" name="subjekt"/></p>
 	<p>Nachricht: <textarea name="nachricht" cols="50" rows="10"></textarea></p>
 	<p><input type="submit" value="senden" /></p>
