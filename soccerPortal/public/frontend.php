@@ -12,6 +12,7 @@ if(isset($_SESSION["username"])){
 <title>Soccer Portal</title>
 
 <link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/styleProfil.css" rel="stylesheet" type="text/css" />
 <link href="../css/dropdown.css" rel="stylesheet" type="text/css" />
 <link rel="SHORTCUT ICON" href="../sp.ico" type="image/x-icon">
 
