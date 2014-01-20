@@ -85,7 +85,7 @@ a         		{
 				top:15px;
 				margin-left:50px;
 				z-index:0;
-				height:1000px;
+				height:800px;
 				width:200px;
 				border-top-left-radius:200px;
 				border-bottom-left-radius:200px;
@@ -95,7 +95,7 @@ a         		{
 #sidenavi		{
 				position:relative;
 				z-index:1;
-				height:500px;
+				height:270px;
 				width:180px;
 				background-color:#666;
 				float:right;
@@ -257,7 +257,7 @@ a         		{
 /* Bereich unter dem Banner der den Inhalt fasst */
 #content		{
 				height:auto;
-				min-height: 800px;
+				min-height: 435px;
 				width: 900px;
 				background-color:#2b2a2a;
 				margin-left:11px;
