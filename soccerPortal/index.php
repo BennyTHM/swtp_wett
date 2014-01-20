@@ -162,6 +162,10 @@
 				<br />
 				Stadt: <input class="formfield inset" type="text" name="stadt" value="Stadt">
 				<br />
+				<input type="checkbox" name="agb" id="agbs" value=""> Ich akzeptiere die Allgemeinen Geschäftsbedingungen des Soccerportal
+				<br />
+				<input type="checkbox" name="news" id="newsletter" value=""> Ja, ich möchte den Newsletter abonnieren
+				<br />
 				<input type="submit" value="Senden">
 				<br />
 				<br />

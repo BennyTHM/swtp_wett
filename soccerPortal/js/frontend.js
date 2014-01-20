@@ -42,19 +42,15 @@ $(document).ready(function() {
 	//Profil
 	$("#button5").click(function(){
 		$( "#frontcontent" ).load( "profil.php");
-		document.getElementById('top').innerHTML='Profil:';
 	});
 	$("#profilPic").click(function(){
 		$( "#frontcontent" ).load( "profil.php");
-		document.getElementById('top').innerHTML='Profil:';
 	});
 	$("#profilAnsicht").click(function(){
 		$( "#frontcontent" ).load( "profil.php");
-		document.getElementById('top').innerHTML='Profil:';
 	});
 	$("#profilBear").click(function(){
 		$( "#frontcontent" ).load( "profilBear.php");
-		document.getElementById('top').innerHTML='Profil bearbeiten:';
 	});
 	//tabellen der Ligen
 	$("#button6").click(function(){
