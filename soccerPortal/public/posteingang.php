@@ -35,7 +35,7 @@ if(isset($_SESSION["username"])){
 				?> 
 			</td>
 			<td> <?php echo $zeile['datetime']; ?> </td>
-			<td> <a href="message.php"><?php echo $zeile['subject']; ?></a> </td>
+			<td> <a href="frontend.php?dreck=3&massage=<?php echo $zeile['privateMessagesId']; ?>"><?php echo $zeile['subject']; ?></a> </td>
 		</tr>
 	<?php
 	}

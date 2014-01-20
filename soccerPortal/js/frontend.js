@@ -9,19 +9,19 @@ $(document).ready(function() {
 	//Dynamisch nachladen
 	//Nachrichten
 	$("#posteingang").click(function(){
-		$( "#inhalt" ).load( "posteingang.php");
+		$( "#frontcontent" ).load( "posteingang.php");
 		document.getElementById('top').innerHTML='Posteingang:';
 	});
 	$("#postausgang").click(function(){
-		$( "#inhalt" ).load( "postausgang.php");
+		$( "#frontcontent" ).load( "postausgang.php");
 		document.getElementById('top').innerHTML='Postausgang:';
 	});
 	$("#verfassen").click(function(){
-		$( "#inhalt" ).load( "pm.php");
+		$( "#frontcontent" ).load( "pm.php");
 		document.getElementById('top').innerHTML='Mitteilung verfassen:';
 	});
 	$("#button1").click(function(){
-		$( "#inhalt" ).load( "posteingang.php");
+		$( "#frontcontent" ).load( "posteingang.php");
 		document.getElementById('top').innerHTML='Posteingang:';
 	});
 	//Wetten
