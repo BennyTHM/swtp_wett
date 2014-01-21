@@ -103,18 +103,44 @@ $row = $result->fetch_array();
 		
 		<h1>Profil Einstellungen</h1>
 		<form>
+		
 			<p>Soll angezeigt werden ob sie online sind?</p>
-			<p><input type="radio" name="online" id="online1" value="" checked>Ja, meinen Freundne soll angezeigt werden, dass ich online bin.</p>
-			<p><input type="radio" name="online" id="online2" value="">Nein, meinen Freunden soll nicht angezeigt werden, dass ich online bin</p>
+			<p>
+				<input type="radio" name="online" id="online1" value="" <?php if($row['set_online']==1){ echo "checked";}?>>
+				Ja, meinen Freundne soll angezeigt werden, dass ich online bin.
+			</p>
+			<p>
+				<input type="radio" name="online" id="online2" value="" <?php if($row['set_online']==0){ echo "checked";}?>>
+				Nein, meinen Freunden soll nicht angezeigt werden, dass ich online bin
+			</p>
+			
 			<p>Wollen Sie die Shoutbox angezeigt bekommen?</p>
-			<p><input type="radio" name="shoutbox" id="shoutbox1" value="" checked>Ja, die Shoutbox soll angezeigt werden</p>
-			<p><input type="radio" name="shoutbox" id="shoutbox2" value="">Nein, die Shoutbox soll nicht angezeigt werden </p>
+			<p>
+				<input type="radio" name="shoutbox" id="shoutbox1" value="" <?php if($row['set_shoutbox']==1){ echo "checked";}?>>
+				Ja, die Shoutbox soll angezeigt werden
+			</p>
+			<p>
+				<input type="radio" name="shoutbox" id="shoutbox2" value="" <?php if($row['set_shoutbox']==0){ echo "checked";}?>>
+				Nein, die Shoutbox soll nicht angezeigt werden 
+			</p>
 			<p>Wollen Sie per Email benachrichtigt werden, wenn Sie ein neue Nachricht im Spiel bekommen haben?</p>
-			<p><input type="radio" name="emailNachricht" id="emailNachricht1" value="" checked>Ja, ich m&ouml;chte benachrichtigt werden</p>
-			<p><input type="radio" name="emailNachricht" id="emailNachricht2" value="">Nein, ich m&ouml;chte nicht benachrichtigt werden </p>
+			<p>
+				<input type="radio" name="emailNachricht" id="emailNachricht1" value="" <?php if($row['set_message']==1){ echo "checked";}?>>
+				Ja, ich m&ouml;chte benachrichtigt werden
+			</p>
+			<p>
+				<input type="radio" name="emailNachricht" id="emailNachricht2" value="" <?php if($row['set_message']==0){ echo "checked";}?>>
+				Nein, ich m&ouml;chte nicht benachrichtigt werden 
+			</p>
 			<p>M&ouml;chten Sie den Newsletter empfangen um aktuelle Informationen zum Spiel geschehen und neuerungen erhalten?</p>
-			<p><input type="radio" name="newsletter" id="newsletter1" value="" checked>Ja, ich m&ouml;chte den Newsletter erhalten</p>
-			<p><input type="radio" name="newsletter" id="newsletter2" value="">Nein, ich m&ouml;chte den Newsletter nicht erhalten </p>
+			<p>
+				<input type="radio" name="newsletter" id="newsletter1" value="" <?php if($row['set_newsletter']==1){ echo "checked";}?>>
+				Ja, ich m&ouml;chte den Newsletter erhalten
+			</p>
+			<p>
+				<input type="radio" name="newsletter" id="newsletter2" value="" <?php if($row['set_newsletter']==1){ echo "checked";}?>>
+				Nein, ich m&ouml;chte den Newsletter nicht erhalten 
+			</p>
 			<input type="submit" name="submit4" value="speichern" />
 		</form>
 		
