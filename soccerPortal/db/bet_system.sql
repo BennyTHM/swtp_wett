@@ -1006,7 +1006,7 @@ CREATE TABLE IF NOT EXISTS `user_has_team` (
 -- Constraints der Tabelle `bet`
 --
 ALTER TABLE `bet`
-  ADD CONSTRAINT `fk_Bet_User1` FOREIGN KEY (`User_userID`) REFERENCES `user` (`userID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_Bet_User1` FOREIGN KEY (`User_userID`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_Bet_Game1` FOREIGN KEY (`Game_gameID`) REFERENCES `game` (`gameID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
@@ -1019,20 +1019,20 @@ ALTER TABLE `bet_statistic`
 -- Constraints der Tabelle `blocked`
 --
 ALTER TABLE `blocked`
-  ADD CONSTRAINT `fk_Blocked_User1` FOREIGN KEY (`User_userId`) REFERENCES `user` (`userID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_Blocked_User1` FOREIGN KEY (`User_userId`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints der Tabelle `combibet`
 --
 ALTER TABLE `combibet`
-  ADD CONSTRAINT `fk_Combibet_User1` FOREIGN KEY (`User_userID`) REFERENCES `user` (`userID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_Combibet_User1` FOREIGN KEY (`User_userID`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints der Tabelle `complaint`
 --
 ALTER TABLE `complaint`
-  ADD CONSTRAINT `fk_Complaint_User1` FOREIGN KEY (`User_userID1`) REFERENCES `user` (`userID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_Complaint_User2` FOREIGN KEY (`User_userID2`) REFERENCES `user` (`userID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_Complaint_User1` FOREIGN KEY (`User_userID1`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_Complaint_User2` FOREIGN KEY (`User_userID2`) REFERENCES `user` (`userID`) ON DELETE CASCADEON UPDATE NO ACTION;
 
 --
 -- Constraints der Tabelle `contest`
@@ -1052,14 +1052,14 @@ ALTER TABLE `contest_has_team`
 -- Constraints der Tabelle `cupons`
 --
 ALTER TABLE `cupons`
-  ADD CONSTRAINT `fk_Cupons_User1` FOREIGN KEY (`User_userID`) REFERENCES `user` (`userID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_Cupons_User1` FOREIGN KEY (`User_userID`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints der Tabelle `friend`
 --
 ALTER TABLE `friend`
-  ADD CONSTRAINT `fk_User_has_User_User1` FOREIGN KEY (`User_userID1`) REFERENCES `user` (`userID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_User_has_User_User2` FOREIGN KEY (`User_userID2`) REFERENCES `user` (`userID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_User_has_User_User1` FOREIGN KEY (`User_userID1`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_User_has_User_User2` FOREIGN KEY (`User_userID2`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints der Tabelle `game`
@@ -1087,7 +1087,7 @@ ALTER TABLE `privatemessage`
 -- Constraints der Tabelle `shout`
 --
 ALTER TABLE `shout`
-  ADD CONSTRAINT `fk_Shout_User1` FOREIGN KEY (`User_userID`) REFERENCES `user` (`userID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_Shout_User1` FOREIGN KEY (`User_userID`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints der Tabelle `statistic`
@@ -1113,14 +1113,14 @@ ALTER TABLE `user`
 -- Constraints der Tabelle `userdescription`
 --
 ALTER TABLE `userdescription`
-  ADD CONSTRAINT `fk_Userdescription_User1` FOREIGN KEY (`User_userId`) REFERENCES `user` (`userID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_Userdescription_User1` FOREIGN KEY (`User_userId`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints der Tabelle `user_has_team`
 --
 ALTER TABLE `user_has_team`
-  ADD CONSTRAINT `fk_user_has_team_user1` FOREIGN KEY (`user_userID`) REFERENCES `user` (`userID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_user_has_team_team1` FOREIGN KEY (`team_teamID`) REFERENCES `team` (`teamID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_user_has_team_user1` FOREIGN KEY (`user_userID`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_user_has_team_team1` FOREIGN KEY (`team_teamID`) REFERENCES `team` (`teamID`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
