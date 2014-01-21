@@ -42,7 +42,7 @@ if (!$mysql->exist($email, $username)){
 	
 	echo $query;
 	$result = $mysql->mysqli->query($query);
-	if ($result){
+	if ($result)
 		echo "Erfolgreich registriert!";	
  		sendEmail($email,"Registrierung soccerPortal", "Willkommen zum soccerPortal!\n\nSie können sich nun mit diesen Daten anmelden:\nE-Mail: ".$email."\nPasswort: ".$password."\n\nIhr soccerPortal-Team");
 	} else {
@@ -54,7 +54,7 @@ if (!$mysql->exist($email, $username)){
 }
 
 } else {
-	echo "Sie müssen die AGBs akzeptieren, sonst können Sie sich nicht anmelden.";
+	echo "Sie m&auml;ssen die AGBs akzeptieren, sonst k&ouml;nnen Sie sich nicht anmelden.";
 }
 
 
