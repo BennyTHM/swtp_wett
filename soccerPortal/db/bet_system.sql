@@ -1032,7 +1032,7 @@ ALTER TABLE `combibet`
 --
 ALTER TABLE `complaint`
   ADD CONSTRAINT `fk_Complaint_User1` FOREIGN KEY (`User_userID1`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_Complaint_User2` FOREIGN KEY (`User_userID2`) REFERENCES `user` (`userID`) ON DELETE CASCADEON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_Complaint_User2` FOREIGN KEY (`User_userID2`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints der Tabelle `contest`
