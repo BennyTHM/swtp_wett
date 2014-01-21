@@ -1,5 +1,10 @@
 <?php
  session_start();
+ 
+ include '../includes/connect.php';
+	
+	$mysql = new Mysql();
+	$mysql->connect();
 
 if(isset($_SESSION["username"])){
 ?>
@@ -273,15 +278,24 @@ if(isset($_SESSION["username"])){
 
   <!------------------------------------------->
   <!-- open shoutbox -->
-  <?php $bild="zuklappen.png" ?>
-    <div id="shoutboxbutton">
-      <img src="<?php echo "../images/site/shoutbox/" . $bild; ?>" id="shoutboxpicture" alt="shoutbox" onclick="changePic();"/>
-    </div>
-    <div id="shoutbox" class="ui-widget-content">
-      <p>
-        Hier steht dann sp�ter die shoutbox drinnen. Dort kann man chatten und so ein Mist...
-      </p>
-    </div>
+  <?php 
+	$sqlShout = "SELECT set_shoutbox FROM user WHERE userID = '". $_SESSION["userid"] ."';";
+	$resultShout=$mysql->mysqli->query($sqlShout) or die("Anfrage 6 fehlgeschlagen: " . mysql_error());
+	$rowShout = $resultShout->fetch_array();
+	if($rowShout['set_shoutbox']==1){
+		$bild="zuklappen.png"; 
+		?>
+		<div id="shoutboxbutton">
+		  <img src="<?php echo "../images/site/shoutbox/" . $bild; ?>" id="shoutboxpicture" alt="shoutbox" onclick="changePic();"/>
+		</div>
+		<div id="shoutbox" class="ui-widget-content">
+		  <p>
+			Hier steht dann später die shoutbox drinnen. Dort kann man chatten und so ein Mist...
+		  </p>
+		</div>
+	<?php 
+		}
+	?>
     <!-- close shoutbox -->
 
 </body>
