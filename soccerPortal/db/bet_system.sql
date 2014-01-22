@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 20. Jan 2014 um 21:26
--- Server Version: 5.6.11
--- PHP-Version: 5.5.3
+-- Erstellungszeit: 22. Jan 2014 um 01:39
+-- Server Version: 5.5.32
+-- PHP-Version: 5.4.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,7 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `bet_system`
 --
-DROP SCHEMA IF EXISTS `bet_system` ;
 CREATE DATABASE IF NOT EXISTS `bet_system` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `bet_system`;
 
@@ -29,7 +28,6 @@ USE `bet_system`;
 -- Tabellenstruktur für Tabelle `bet`
 --
 
-DROP TABLE IF EXISTS `bet`;
 CREATE TABLE IF NOT EXISTS `bet` (
   `betID` bigint(20) NOT NULL AUTO_INCREMENT,
   `User_userID` int(11) NOT NULL,
@@ -125,7 +123,6 @@ INSERT INTO `bet` (`betID`, `User_userID`, `Game_gameID`, `tipp`, `bet_amount`, 
 -- Tabellenstruktur für Tabelle `bet_statistic`
 --
 
-DROP TABLE IF EXISTS `bet_statistic`;
 CREATE TABLE IF NOT EXISTS `bet_statistic` (
   `user_userID` int(11) NOT NULL,
   `betcount` int(11) NOT NULL DEFAULT '0',
@@ -144,7 +141,6 @@ CREATE TABLE IF NOT EXISTS `bet_statistic` (
 -- Tabellenstruktur für Tabelle `blocked`
 --
 
-DROP TABLE IF EXISTS `blocked`;
 CREATE TABLE IF NOT EXISTS `blocked` (
   `User_userId` int(11) NOT NULL,
   `free_date` datetime NOT NULL,
@@ -170,7 +166,6 @@ INSERT INTO `blocked` (`User_userId`, `free_date`, `block_date`, `description`) 
 -- Tabellenstruktur für Tabelle `combibet`
 --
 
-DROP TABLE IF EXISTS `combibet`;
 CREATE TABLE IF NOT EXISTS `combibet` (
   `combibetID` int(11) NOT NULL AUTO_INCREMENT,
   `User_userID` int(11) NOT NULL,
@@ -206,7 +201,6 @@ INSERT INTO `combibet` (`combibetID`, `User_userID`) VALUES
 -- Tabellenstruktur für Tabelle `complaint`
 --
 
-DROP TABLE IF EXISTS `complaint`;
 CREATE TABLE IF NOT EXISTS `complaint` (
   `complaintID` int(11) NOT NULL AUTO_INCREMENT,
   `User_userID1` int(11) NOT NULL,
@@ -238,7 +232,6 @@ INSERT INTO `complaint` (`complaintID`, `User_userID1`, `User_userID2`, `state`,
 -- Tabellenstruktur für Tabelle `contest`
 --
 
-DROP TABLE IF EXISTS `contest`;
 CREATE TABLE IF NOT EXISTS `contest` (
   `contestID` int(11) NOT NULL,
   `sport_sportID` int(11) NOT NULL,
@@ -265,7 +258,6 @@ INSERT INTO `contest` (`contestID`, `sport_sportID`, `titel`, `description`, `be
 -- Tabellenstruktur für Tabelle `contest_has_team`
 --
 
-DROP TABLE IF EXISTS `contest_has_team`;
 CREATE TABLE IF NOT EXISTS `contest_has_team` (
   `Contest_contestID` int(11) NOT NULL,
   `Team_teamID` int(11) NOT NULL,
@@ -335,7 +327,6 @@ INSERT INTO `contest_has_team` (`Contest_contestID`, `Team_teamID`, `section_Sec
 -- Tabellenstruktur für Tabelle `cupons`
 --
 
-DROP TABLE IF EXISTS `cupons`;
 CREATE TABLE IF NOT EXISTS `cupons` (
   `cuponsID` int(11) NOT NULL AUTO_INCREMENT,
   `User_userID` int(11) NOT NULL,
@@ -375,7 +366,6 @@ INSERT INTO `cupons` (`cuponsID`, `User_userID`, `amount`, `code`) VALUES
 -- Tabellenstruktur für Tabelle `friend`
 --
 
-DROP TABLE IF EXISTS `friend`;
 CREATE TABLE IF NOT EXISTS `friend` (
   `User_userID1` int(11) NOT NULL,
   `User_userID2` int(11) NOT NULL,
@@ -503,7 +493,6 @@ INSERT INTO `friend` (`User_userID1`, `User_userID2`, `isonline`) VALUES
 -- Tabellenstruktur für Tabelle `game`
 --
 
-DROP TABLE IF EXISTS `game`;
 CREATE TABLE IF NOT EXISTS `game` (
   `gameID` int(11) NOT NULL AUTO_INCREMENT,
   `Team_home` int(11) NOT NULL,
@@ -547,7 +536,6 @@ INSERT INTO `game` (`gameID`, `Team_home`, `Team_guest`, `Season_seasonID`, `quo
 -- Tabellenstruktur für Tabelle `image`
 --
 
-DROP TABLE IF EXISTS `image`;
 CREATE TABLE IF NOT EXISTS `image` (
   `imageID` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
@@ -570,7 +558,6 @@ INSERT INTO `image` (`imageID`, `name`, `description`, `imgdata`, `imgtype`) VAL
 -- Tabellenstruktur für Tabelle `partbet`
 --
 
-DROP TABLE IF EXISTS `partbet`;
 CREATE TABLE IF NOT EXISTS `partbet` (
   `partbetID` int(11) NOT NULL AUTO_INCREMENT,
   `Combibet_combibetID` int(11) NOT NULL,
@@ -634,7 +621,6 @@ INSERT INTO `partbet` (`partbetID`, `Combibet_combibetID`, `Game_gameID`, `tipp`
 -- Tabellenstruktur für Tabelle `privatemessage`
 --
 
-DROP TABLE IF EXISTS `privatemessage`;
 CREATE TABLE IF NOT EXISTS `privatemessage` (
   `privateMessagesId` bigint(20) NOT NULL AUTO_INCREMENT,
   `User_sender` int(11) NOT NULL,
@@ -675,7 +661,6 @@ INSERT INTO `privatemessage` (`privateMessagesId`, `User_sender`, `User_reseiver
 -- Tabellenstruktur für Tabelle `season`
 --
 
-DROP TABLE IF EXISTS `season`;
 CREATE TABLE IF NOT EXISTS `season` (
   `seasonID` int(11) NOT NULL AUTO_INCREMENT,
   `begin_date` datetime NOT NULL,
@@ -698,7 +683,6 @@ INSERT INTO `season` (`seasonID`, `begin_date`, `end_date`) VALUES
 -- Tabellenstruktur für Tabelle `section`
 --
 
-DROP TABLE IF EXISTS `section`;
 CREATE TABLE IF NOT EXISTS `section` (
   `sectionID` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) DEFAULT NULL,
@@ -725,7 +709,6 @@ INSERT INTO `section` (`sectionID`, `name`) VALUES
 -- Tabellenstruktur für Tabelle `shout`
 --
 
-DROP TABLE IF EXISTS `shout`;
 CREATE TABLE IF NOT EXISTS `shout` (
   `shoutID` bigint(20) NOT NULL AUTO_INCREMENT,
   `User_userID` int(11) NOT NULL,
@@ -767,7 +750,6 @@ INSERT INTO `shout` (`shoutID`, `User_userID`, `date`, `message`) VALUES
 -- Tabellenstruktur für Tabelle `sport`
 --
 
-DROP TABLE IF EXISTS `sport`;
 CREATE TABLE IF NOT EXISTS `sport` (
   `sportID` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(45) NOT NULL,
@@ -788,7 +770,6 @@ INSERT INTO `sport` (`sportID`, `title`, `description`) VALUES
 -- Tabellenstruktur für Tabelle `statistic`
 --
 
-DROP TABLE IF EXISTS `statistic`;
 CREATE TABLE IF NOT EXISTS `statistic` (
   `Team_teamID` int(11) NOT NULL,
   `Season_seasonID` int(11) NOT NULL,
@@ -828,7 +809,6 @@ INSERT INTO `statistic` (`Team_teamID`, `Season_seasonID`, `won`, `lost`, `draw`
 -- Tabellenstruktur für Tabelle `team`
 --
 
-DROP TABLE IF EXISTS `team`;
 CREATE TABLE IF NOT EXISTS `team` (
   `teamID` int(11) NOT NULL AUTO_INCREMENT,
   `Sport_sportID` int(11) NOT NULL,
@@ -892,7 +872,6 @@ INSERT INTO `team` (`teamID`, `Sport_sportID`, `Image_imageID`, `title`) VALUES
 -- Tabellenstruktur für Tabelle `user`
 --
 
-DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `userID` int(11) NOT NULL AUTO_INCREMENT,
   `email` varchar(45) NOT NULL,
@@ -907,6 +886,10 @@ CREATE TABLE IF NOT EXISTS `user` (
   `set_newsletter` tinyint(1) NOT NULL,
   `signin_date` date NOT NULL,
   `image_imageID` int(11) NOT NULL,
+  `description` text,
+  `name` varchar(45) DEFAULT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `city` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`userID`),
   UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `email_UNIQUE` (`email`),
@@ -917,65 +900,37 @@ CREATE TABLE IF NOT EXISTS `user` (
 -- Daten für Tabelle `user`
 --
 
-INSERT INTO `user` (`userID`, `email`, `username`, `password`, `salt`, `isadmin`, `balance`, `set_online`, `set_shoutbox`, `set_message`, `set_newsletter`, `signin_date`, `image_imageID`) VALUES
-(1, 'hans@wurst.de', 'hanswurst', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1),
-(2, 'günther@hermann', 'ghermann', 'x', 'x', 0, 100, 0, 1, 1, 1, '2014-01-01', 1),
-(3, 'kevin.rompf@mni.thm.de', 'kevin', 'x', 'x', 1, 0, 0, 1, 1, 1, '2014-01-01', 1),
-(4, 'selcukbakkal@hotmail.de', 'selcuk', 'x', 'x', 1, 200, 0, 1, 1, 1, '2014-01-01', 1),
-(5, 'lars.becker@mni.thm.de', 'lars', 'x', 'x', 1, 200, 0, 1, 1, 1, '2014-01-01', 1),
-(6, 'julian.naumann@mni.thm.de', 'julian', 'x', 'x', 1, 0, 0, 1, 1, 1, '2014-01-01', 1),
-(7, 'peter.janauschek@mni.thm.de', 'peter', 'x', 'x', 1, 200, 0, 1, 1, 1, '2014-01-01', 1),
-(8, 'benjamin.schlosser@mni.thm.de', 'benjamin', 'x', 'x', 1, 0, 0, 1, 1, 1, '2014-01-01', 1),
-(9, 'test9@email.de', 'nutzer9', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1),
-(10, 'test10@email.de', 'nutzer10', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1),
-(11, 'test11@email.de', 'nutzer11', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1),
-(12, 'test12@email.de', 'nutzer12', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1),
-(13, 'test13@email.de', 'nutzer13', 'x', 'x', 0, 100, 0, 1, 1, 1, '2014-01-01', 1),
-(14, 'test14@email.de', 'nutzer14', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1),
-(15, 'test15@email.de', 'nutzer15', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1),
-(16, 'test16@email.de', 'nutzer16', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1),
-(17, 'test17@email.de', 'nutzer17', 'x', 'x', 0, 100, 0, 1, 1, 1, '2014-01-01', 1),
-(18, 'test18@email.de', 'nutzer18', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1),
-(19, 'test19@email.de', 'nutzer19', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1),
-(20, 'test20@email.de', 'nutzer20', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1),
-(21, 'test21@email.de', 'nutzer21', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1),
-(22, 'test22@email.de', 'nutzer22', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1),
-(23, 'test23@email.de', 'nutzer23', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1),
-(24, 'test24@email.de', 'nutzer24', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1),
-(25, 'test25@email.de', 'nutzer25', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1),
-(26, 'test26@email.de', 'nutzer26', 'x', 'x', 0, 100, 0, 1, 1, 1, '2014-01-01', 1),
-(27, 'test27@email.de', 'nutzer27', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1),
-(28, 'test28@email.de', 'nutzer28', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1),
-(29, 'test29@email.de', 'nutzer29', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1),
-(30, 'test30@email.de', 'nutzer30', 'x', 'x', 0, 100, 0, 1, 1, 1, '2014-01-01', 1);
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `userdescription`
---
-
-DROP TABLE IF EXISTS `userdescription`;
-CREATE TABLE IF NOT EXISTS `userdescription` (
-  `User_userId` int(11) NOT NULL,
-  `description` text,
-  `name` varchar(45) DEFAULT NULL,
-  `firstname` varchar(45) DEFAULT NULL,
-  `city` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`User_userId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Daten für Tabelle `userdescription`
---
-
-INSERT INTO `userdescription` (`User_userId`, `description`, `name`, `firstname`, `city`) VALUES
-(1, 'At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', NULL, NULL, NULL),
-(2, 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', NULL, NULL, NULL),
-(6, 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', NULL, NULL, NULL),
-(11, 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', NULL, NULL, NULL),
-(14, 'At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', NULL, NULL, NULL),
-(17, 'At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', NULL, NULL, NULL);
+INSERT INTO `user` (`userID`, `email`, `username`, `password`, `salt`, `isadmin`, `balance`, `set_online`, `set_shoutbox`, `set_message`, `set_newsletter`, `signin_date`, `image_imageID`, `description`, `name`, `firstname`, `city`) VALUES
+(1, 'hans@wurst.de', 'hanswurst', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1, 'Ich bin der Hans Wurst ein absoluter Pro Gamer!!!', 'Hans', 'Wurst', 'Frankfurt'),
+(2, 'günther@hermann', 'ghermann', 'x', 'x', 0, 100, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(3, 'kevin.rompf@mni.thm.de', 'kevin', 'x', 'x', 1, 0, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(4, 'selcukbakkal@hotmail.de', 'selcuk', 'x', 'x', 1, 200, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(5, 'lars.becker@mni.thm.de', 'lars', 'x', 'x', 1, 200, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(6, 'julian.naumann@mni.thm.de', 'julian', 'x', 'x', 1, 0, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(7, 'peter.janauschek@mni.thm.de', 'peter', 'x', 'x', 1, 200, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(8, 'benjamin.schlosser@mni.thm.de', 'benjamin', 'x', 'x', 1, 0, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(9, 'test9@email.de', 'nutzer9', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(10, 'test10@email.de', 'nutzer10', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(11, 'test11@email.de', 'nutzer11', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(12, 'test12@email.de', 'nutzer12', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(13, 'test13@email.de', 'nutzer13', 'x', 'x', 0, 100, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(14, 'test14@email.de', 'nutzer14', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(15, 'test15@email.de', 'nutzer15', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(16, 'test16@email.de', 'nutzer16', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(17, 'test17@email.de', 'nutzer17', 'x', 'x', 0, 100, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(18, 'test18@email.de', 'nutzer18', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(19, 'test19@email.de', 'nutzer19', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(20, 'test20@email.de', 'nutzer20', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(21, 'test21@email.de', 'nutzer21', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(22, 'test22@email.de', 'nutzer22', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(23, 'test23@email.de', 'nutzer23', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(24, 'test24@email.de', 'nutzer24', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(25, 'test25@email.de', 'nutzer25', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(26, 'test26@email.de', 'nutzer26', 'x', 'x', 0, 100, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(27, 'test27@email.de', 'nutzer27', 'x', 'x', 0, 0, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(28, 'test28@email.de', 'nutzer28', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(29, 'test29@email.de', 'nutzer29', 'x', 'x', 0, 200, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL),
+(30, 'test30@email.de', 'nutzer30', 'x', 'x', 0, 100, 0, 1, 1, 1, '2014-01-01', 1, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -983,7 +938,6 @@ INSERT INTO `userdescription` (`User_userId`, `description`, `name`, `firstname`
 -- Tabellenstruktur für Tabelle `user_has_team`
 --
 
-DROP TABLE IF EXISTS `user_has_team`;
 CREATE TABLE IF NOT EXISTS `user_has_team` (
   `user_userID` int(11) NOT NULL,
   `team_teamID` int(11) NOT NULL,
@@ -1108,12 +1062,6 @@ ALTER TABLE `team`
 --
 ALTER TABLE `user`
   ADD CONSTRAINT `fk_user_image1` FOREIGN KEY (`image_imageID`) REFERENCES `image` (`imageID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Constraints der Tabelle `userdescription`
---
-ALTER TABLE `userdescription`
-  ADD CONSTRAINT `fk_Userdescription_User1` FOREIGN KEY (`User_userId`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE NO ACTION;
 
 --
 -- Constraints der Tabelle `user_has_team`
