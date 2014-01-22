@@ -41,7 +41,7 @@ if(isset($_POST['submit2'])){
 		$result=$mysql->mysqli->query($sql) or die ("Auslesen gescheitert");
 		$row = $result->fetch_assoc();
 		if(strcmp($row['password'],$_POST['pw2'])==0){
-			$sql2="UPDATE userdescription Set city = '".$_POST['stadt']."' WHERE User_userID='".$_SESSION['userid']."';";
+			$sql2="UPDATE user Set city = '".$_POST['stadt']."' WHERE userID='".$_SESSION['userid']."';";
 			$result2=$mysql->mysqli->query($sql2) or die ("Update gescheitert");
 		}
 		else{
@@ -93,7 +93,7 @@ if(isset($_POST['submit4'])){
 		$result=$mysql->mysqli->query($sql) or die ("Auslesen gescheitert");
 		$row = $result->fetch_assoc();
 		if(strcmp($row['password'],$_POST['pw4'])==0){
-			$sql2="UPDATE userdescription Set firstname = '".$_POST['vorname']."' WHERE User_userID='".$_SESSION['userid']."';";
+			$sql2="UPDATE user Set firstname = '".$_POST['vorname']."' WHERE userID='".$_SESSION['userid']."';";
 			$result2=$mysql->mysqli->query($sql2) or die ("Update gescheitert");
 		}
 		else{
@@ -107,7 +107,7 @@ if(isset($_POST['submit5'])){
 		$result=$mysql->mysqli->query($sql) or die ("Auslesen gescheitert");
 		$row = $result->fetch_assoc();
 		if(strcmp($row['password'],$_POST['pw5'])==0){
-			$sql2="UPDATE userdescription Set name = '".$_POST['nachname']."' WHERE User_userID='".$_SESSION['userid']."';";
+			$sql2="UPDATE user Set name = '".$_POST['nachname']."' WHERE userID='".$_SESSION['userid']."';";
 			$result2=$mysql->mysqli->query($sql2) or die ("Update gescheitert");
 		}
 		else{
@@ -121,7 +121,7 @@ if(isset($_POST['submit6'])){
 		$result=$mysql->mysqli->query($sql) or die ("Auslesen gescheitert");
 		$row = $result->fetch_assoc();
 		if(strcmp($row['password'],$_POST['pw6'])==0){
-			$sql2="UPDATE userdescription Set description = '".$_POST['description']."' WHERE User_userID='".$_SESSION['userid']."';";
+			$sql2="UPDATE user Set description = '".$_POST['description']."' WHERE userID='".$_SESSION['userid']."';";
 			$result2=$mysql->mysqli->query($sql2) or die ("Update gescheitert");
 		}
 		else{
@@ -133,10 +133,6 @@ if(isset($_POST['submit6'])){
 $sql = "SELECT * FROM user WHERE username = '". $_SESSION["username"] ."';";
 $result=$mysql->mysqli->query($sql) or die("Anfrage fehlgeschlagen: " . mysql_error());
 $row = $result->fetch_array();
-
-$sql2 = "SELECT * FROM userdescription WHERE User_userID = '". $_SESSION["userid"] ."';";
-$result2=$mysql->mysqli->query($sql2) or die("Anfrage fehlgeschlagen: " . mysql_error());
-$row2 = $result2->fetch_array();
 
 ?>
 	<div id="profilAll">
@@ -164,7 +160,7 @@ $row2 = $result2->fetch_array();
 			</p>
 		</form>
 	<?php
-		echo '<br>Aktuelle Stadt: ' . $row2["city"] . "<br>";
+		echo '<br>Aktuelle Stadt: ' . $row["city"] . "<br>";
 	?>
 		<form action="profilBear.php" method="post">
 			<p>
@@ -174,7 +170,7 @@ $row2 = $result2->fetch_array();
 			<p>
 		</form>
 	<?php
-		echo '<br>Aktueller Vorname: ' . $row2["firstname"] . "<br>";
+		echo '<br>Aktueller Vorname: ' . $row["firstname"] . "<br>";
 	?>
 		<form action="profilBear.php" method="post">
 			<p>
@@ -184,7 +180,7 @@ $row2 = $result2->fetch_array();
 			<p>
 		</form>
 	<?php
-		echo '<br>Aktueller Nachname: ' . $row2["name"] . "<br>";
+		echo '<br>Aktueller Nachname: ' . $row["name"] . "<br>";
 	?>
 		<form action="profilBear.php" method="post">
 			<p>
@@ -198,7 +194,7 @@ $row2 = $result2->fetch_array();
 	?>
 		<form action="profilBear.php" method="post">
 			<p>
-				Beschreibung &auml;ndern: <textarea name="description" cols="50" rows="10"><?php echo $row2["description"]; ?></textarea><br>
+				Beschreibung &auml;ndern: <textarea name="description" cols="50" rows="10"><?php echo $row["description"]; ?></textarea><br>
 				Passwort eingeben: <input type="password" name="pw6" /><br>
 				<input type="submit" name="submit6" value="best&auml;tigen" /><br>
 			<p>
