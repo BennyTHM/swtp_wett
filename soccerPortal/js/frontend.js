@@ -52,6 +52,9 @@ $(document).ready(function() {
 	$("#profilBear").click(function(){
 		$( "#frontcontent" ).load( "profilBear.php");
 	});
+	$("#profilEinst").click(function(){
+		$( "#frontcontent" ).load( "profilEinst.php");
+	});
 	//tabellen der Ligen
 	$("#button6").click(function(){
 		$( "#inhalt" ).load( ".php");

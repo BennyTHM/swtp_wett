@@ -94,6 +94,7 @@ if(isset($_SESSION["username"])){
                   <ul>
                     <li class="navitem"><div id="profilAnsicht" class="innerdrp"><div id="mInIco">&nbsp Eigenes Profil</div></li>
                     <li class="navitem"><div id="profilBear" class="innerdrp"><div id="mOutIco">&nbsp Profil bearbeiten</div></li>
+					<li class="navitem"><div id="profilEinst" class="innerdrp"><div id="mOutIco">&nbsp Profil Einstellungen</div></li>
                   </ul>
                 </div> <!-- close dropspace -->
             </li>
